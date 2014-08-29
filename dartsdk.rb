@@ -1,6 +1,6 @@
 require 'formula'
 
-class Dart < Formula
+class DartSdk < Formula
   homepage 'https://www.dartlang.org/'
 
   if MacOS.prefer_64_bit?
