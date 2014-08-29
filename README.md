@@ -1,5 +1,7 @@
 # Dart for Homebrew
 
+Current Status: BETA
+
 This is the official [Dart][] tap for [homebrew][].
 
 Mac users can use these formulae to easily install and update Dart SDK and
