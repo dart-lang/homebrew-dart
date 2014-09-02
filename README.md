@@ -29,6 +29,7 @@ For web developers, we highly recommend Dartium:
 
 ```
 brew install dartium
+brew linkapps
 ```
 
 ## Updating
