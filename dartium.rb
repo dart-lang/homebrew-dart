@@ -29,7 +29,7 @@ class Dartium < Formula
 
   def caveats; <<-EOS.undent
      To use with IntelliJ, set the Dartium execute home to:
-        #{prefix}/Chromium
+        #{prefix}/Chromium.app
     EOS
   end
 
