@@ -5,6 +5,7 @@ class Dartium < Formula
 
   require_relative 'dev_info'
   require_relative 'stable_info'
+
   version DartStable::VERSION
   url "https://storage.googleapis.com/dart-archive/#{DartStable::DARTIUM_FILE}"
   sha256 DartStable::DARTIUM_HASH

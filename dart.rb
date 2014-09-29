@@ -5,7 +5,6 @@ class Dart < Formula
 
   require_relative 'dev_info'
   require_relative 'stable_info'
-  stable_version='1.6.0'
 
   version DartStable::VERSION
   if MacOS.prefer_64_bit?
