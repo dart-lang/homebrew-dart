@@ -3,25 +3,27 @@ require 'formula'
 class Dart < Formula
   homepage 'https://www.dartlang.org/'
 
+  require_relative 'dev_info'
+  require_relative 'stable_info'
+  stable_version='1.6.0'
+
+  version DartStable::VERSION
   if MacOS.prefer_64_bit?
-    version '1.6.0'
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/sdk/dartsdk-macos-x64-release.zip'
-    sha256 '98fba491b86e70d7fc44ed69977b365b96f9d7d79a3a95a89553df9aafaf7f81'
+    url "https://storage.googleapis.com/dart-archive/#{DartStable::SDK64_FILE}"
+    sha256 DartStable::SDK64_HASH
   else
-    version '1.6.0'
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/sdk/dartsdk-macos-ia32-release.zip'
-    sha256 '2ad33e57098fb567c6b627d149899ad301de88f03edc92c74611956642eca382'
+    url "https://storage.googleapis.com/dart-archive/#{DartStable::SDK32_FILE}"
+    sha256 DartStable::SDK32_HASH
   end
 
   devel do
+    version DartDev::VERSION
     if MacOS.prefer_64_bit?
-      version '1.6.0-dev.9.7'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/39537/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '5042082e881e3d074728045e01e6adc4a351e76945fdec0f3a9164e76475308b'
+      url "https://storage.googleapis.com/dart-archive/#{DartDev::SDK64_FILE}"
+      sha256 DartDev::SDK64_HASH
     else
-      version '1.6.0-dev.9.7'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/39537/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '87b98b2e0be44930ad2aaa09c5042aa9b15618e37c6e7df1739f6a786b464d51'
+      url "https://storage.googleapis.com/dart-archive/#{DartDev::SDK32_FILE}"
+      sha256 DartDev::SDK32_HASH
     end
   end
 
