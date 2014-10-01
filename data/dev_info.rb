@@ -1,9 +1,9 @@
 module DartDev
-  SDK64_FILE = "channels/dev/release/40302/sdk/dartsdk-macos-x64-release.zip"
-  SDK64_HASH = "488382bbfdfa1c03567b7a7ae1c42d1cf59eed9bfc965636a313c84ae69e70ed"
-  SDK32_FILE = "channels/dev/release/40302/sdk/dartsdk-macos-ia32-release.zip"
-  SDK32_HASH = "4f8d3728e53c9e85b536d97c651848f84d42b14c53d380bdae01ad2efc3f259c"
-  DARTIUM_FILE = "channels/dev/release/40302/dartium/dartium-macos-ia32-release.zip"
-  DARTIUM_HASH = "c497336b6639eac1994026fec4f33472c6f1b1c849be89cdc773294df683687d"
-  VERSION = "1.7.0-dev.3.0"
+  SDK64_FILE = "channels/dev/release/40675/sdk/dartsdk-macos-x64-release.zip"
+  SDK64_HASH = "7371eb59e9450411026615ce18be1f38ff83b89c12b0fe6dc81ed187f28a1fcd"
+  SDK32_FILE = "channels/dev/release/40675/sdk/dartsdk-macos-ia32-release.zip"
+  SDK32_HASH = "a9cedc5f1dbe3d6826133d6a61bd97249d45fcf8a119c3a8c6836a0dcb459654"
+  DARTIUM_FILE = "channels/dev/release/40675/dartium/dartium-macos-ia32-release.zip"
+  DARTIUM_HASH = "37fe75e3d5097e0e3ada32a79ba0d251dfd6cf15ddda0dcc75b3de2c85a4bba4"
+  VERSION = "1.7.0-dev.4.0"
 end
