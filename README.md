@@ -22,7 +22,7 @@ brew tap dart-lang/dart
 To install the Dart SDK:
 
 ```
-brew install dartsdk
+brew install dart
 ```
 
 For web developers, we highly recommend Dartium:
@@ -37,7 +37,7 @@ brew linkapps
 Simply run:
 
 ```
-brew upgrade dartsdk
+brew upgrade dart
 brew upgrade dartium
 ```
 
