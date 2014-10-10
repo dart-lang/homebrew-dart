@@ -3,17 +3,14 @@ require 'formula'
 class Dartium < Formula
   homepage "https://www.dartlang.org"
 
-  require_relative 'data/dev_info'
-  require_relative 'data/stable_info'
-
-  version DartStable::VERSION
-  url "https://storage.googleapis.com/dart-archive/#{DartStable::DARTIUM_FILE}"
-  sha256 DartStable::DARTIUM_HASH
+  version '1.6.0'
+  url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/dartium/dartium-macos-ia32-release.zip'
+  sha256 '1dfe8fefde53620d4917e82cf32a585e3f2faa663f70ba3f9c84fce9da925834'
 
   devel do
-    version DartDev::VERSION
-    url "https://storage.googleapis.com/dart-archive/#{DartDev::DARTIUM_FILE}"
-    sha256 DartDev::DARTIUM_HASH
+    version '1.7.0-dev.4.5'
+    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41004/dartium/dartium-macos-ia32-release.zip'
+    sha256 '36966b107355d6c01bd1117866ae79084c401d995077ea1bbd762872200a66b7'
   end
 
   def shim_script target
