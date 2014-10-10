@@ -3,26 +3,25 @@ require 'formula'
 class Dart < Formula
   homepage 'https://www.dartlang.org/'
 
-  require_relative 'data/dev_info'
-  require_relative 'data/stable_info'
-
-  version DartStable::VERSION
   if MacOS.prefer_64_bit?
-    url "https://storage.googleapis.com/dart-archive/#{DartStable::SDK64_FILE}"
-    sha256 DartStable::SDK64_HASH
+    version '1.6.0'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/sdk/dartsdk-macos-x64-release.zip'
+    sha256 '98fba491b86e70d7fc44ed69977b365b96f9d7d79a3a95a89553df9aafaf7f81'
   else
-    url "https://storage.googleapis.com/dart-archive/#{DartStable::SDK32_FILE}"
-    sha256 DartStable::SDK32_HASH
+    version '1.6.0'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/sdk/dartsdk-macos-ia32-release.zip'
+    sha256 '2ad33e57098fb567c6b627d149899ad301de88f03edc92c74611956642eca382'
   end
 
   devel do
-    version DartDev::VERSION
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/#{DartDev::SDK64_FILE}"
-      sha256 DartDev::SDK64_HASH
+      version '1.7.0-dev.4.5'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41004/sdk/dartsdk-macos-x64-release.zip'
+      sha256 '784ff69f018bc62b1f930b10e603a4c100b2e55eb892168ba1f128d861f93b2a'
     else
-      url "https://storage.googleapis.com/dart-archive/#{DartDev::SDK32_FILE}"
-      sha256 DartDev::SDK32_HASH
+      version '1.7.0-dev.4.5'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41004/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 'd6b285b8c7a51eb1406a6e0de6e8b1f7840cc226febafaf6969752bedb9e9cc2'
     end
   end
 
