@@ -23,7 +23,8 @@ To install the Dart SDK:
 brew install dart
 ```
 
-Tip: Once installed, homebrew will print the path to the Dart SDK. Use this path to configure Dart support in your IDE (like WebStorm).
+Tip: Once installed, homebrew will print the path to the Dart SDK. Use this path to configure Dart support
+in your IDE (like WebStorm).
 
 For web developers, we highly recommend Dartium:
 
