@@ -32,7 +32,7 @@ class Dart < Formula
   end
 
   def caveats; <<-EOS.undent
-    To use with IntelliJ, set the Dart home to:
+    Please note the path to the Dart SDK:
       #{opt_libexec}
     EOS
   end
