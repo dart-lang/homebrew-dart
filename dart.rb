@@ -3,25 +3,23 @@ require 'formula'
 class Dart < Formula
   homepage 'https://www.dartlang.org/'
 
+  version '1.6.0'
   if MacOS.prefer_64_bit?
-    version '1.6.0'
     url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/sdk/dartsdk-macos-x64-release.zip'
     sha256 '98fba491b86e70d7fc44ed69977b365b96f9d7d79a3a95a89553df9aafaf7f81'
   else
-    version '1.6.0'
     url 'https://storage.googleapis.com/dart-archive/channels/stable/release/39553/sdk/dartsdk-macos-ia32-release.zip'
     sha256 '2ad33e57098fb567c6b627d149899ad301de88f03edc92c74611956642eca382'
   end
 
   devel do
+    version '1.7.0-dev.4.6'
     if MacOS.prefer_64_bit?
-      version '1.7.0-dev.4.5'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41004/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '784ff69f018bc62b1f930b10e603a4c100b2e55eb892168ba1f128d861f93b2a'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41090/sdk/dartsdk-macos-x64-release.zip'
+      sha256 'cd6f213291e9c7ac7a8eeaf9681460a6bb0366e0caa94080ddf3b49d1183c7b4'
     else
-      version '1.7.0-dev.4.5'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41004/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 'd6b285b8c7a51eb1406a6e0de6e8b1f7840cc226febafaf6969752bedb9e9cc2'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41090/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 '3795c1f48107a13639523e4321ace053e99b65a99ea8bbfaac83a9b81bb3f1a6'
     end
   end
 
@@ -32,7 +30,7 @@ class Dart < Formula
   end
 
   def caveats; <<-EOS.undent
-    To use with IntelliJ, set the Dart home to:
+    Please note the path to the Dart SDK:
       #{opt_libexec}
     EOS
   end
