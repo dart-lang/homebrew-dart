@@ -9,7 +9,7 @@ class Dartium < Formula
 
   devel do
     version '1.7.0-dev.4.6'
-    url 'https://storage.googleapis.com/dart-archive/channels/dev/releagithubse/41090/dartium/dartium-macos-ia32-release.zip'
+    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41090/dartium/dartium-macos-ia32-release.zip'
     sha256 'a4476ed9dc1f540ada173d83c3104d382094914ff431c09493077a2326406a6c'
   end
 
