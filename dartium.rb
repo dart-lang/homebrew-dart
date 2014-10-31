@@ -8,9 +8,9 @@ class Dartium < Formula
   sha256 'b84e28ca2024318735b3e659e515092e9b6b21ba52cf8f59e9c9807a9fc79680'
 
   devel do
-    version '1.8.0-dev.1.1'
-    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41275/dartium/dartium-macos-ia32-release.zip'
-    sha256 'ba45fcf0f1822b3efcd3c41372888d3d10bd34666b9d37fbf4b5bce9443df46c'
+    version '1.8.0-dev.2.0'
+    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/41389/dartium/dartium-macos-ia32-release.zip'
+    sha256 '9d9211dd1d99daeeeb96a06928aa08359b0bea1ec0961fd407806b7f4becc198'
   end
 
   def shim_script target
