@@ -38,8 +38,8 @@ brew linkapps
 Simply run:
 
 ```
-brew upgrade dart
-brew upgrade dartium
+brew update
+brew upgrade dart dartium
 ```
 
 [homebrew]: http://brew.sh/
