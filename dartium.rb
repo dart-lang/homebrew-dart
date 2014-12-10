@@ -5,14 +5,14 @@ class Dartium < Formula
   release_version = '42013'
 
   version '1.8.0'
-  url 'https://storage.googleapis.com/dart-archive/channels/stable/release/#{release_version}/dartium/dartium-macos-ia32-release.zip'
+  url "https://storage.googleapis.com/dart-archive/channels/stable/release/#{release_version}/dartium/dartium-macos-ia32-release.zip'"
   sha256 '5678d7f49e0f1282aaa8d10afc3f87e4ebf4684277d66c2b44cc71f20f05142e'
 
   devel do
     dev_version = '42033'
 
     version '1.9.0-dev.0.0'
-    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/#{dev_version}/dartium/dartium-macos-ia32-release.zip'
+    url "https://storage.googleapis.com/dart-archive/channels/dev/release/#{dev_version}/dartium/dartium-macos-ia32-release.zip"
     sha256 '5909f9289b68b5c334a5be2cc3cd7664ab3151f26b4817fcac7d6f1601646b20'
 
     resource 'content_shell' do
