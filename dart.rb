@@ -3,13 +3,13 @@ require 'formula'
 class Dart < Formula
   homepage 'https://www.dartlang.org/'
 
-  version '1.8.0'
+  version '1.8.3'
   if MacOS.prefer_64_bit?
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/42013/sdk/dartsdk-macos-x64-release.zip'
-    sha256 '4b86f91e01ef1a20140e0518f870ef8f506d3884315fe9d49acccaf416c2ff15'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/42039/sdk/dartsdk-macos-x64-release.zip'
+    sha256 '106be0cc9add495ab8d986083cf9bbe9439bbcb66847c0ecd851b61048a402d6'
   else
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/42013/sdk/dartsdk-macos-ia32-release.zip'
-    sha256 '23504f50b219d81c5455e7f54c48b80f8cb8a6c207a9b8e81a4b9a259b2fcff8'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/42039/sdk/dartsdk-macos-ia32-release.zip'
+    sha256 '7bd85cecf78a5f438146d66c37cf3cf647c1114af562b8212a62fb85116ad576'
   end
 
   devel do
