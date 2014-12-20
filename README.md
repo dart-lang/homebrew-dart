@@ -33,6 +33,8 @@ brew install dartium
 brew linkapps
 ```
 
+This will also install Content Shell.
+
 ## Updating
 
 Simply run:
