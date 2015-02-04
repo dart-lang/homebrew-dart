@@ -33,6 +33,9 @@ brew install dartium
 brew linkapps
 ```
 
+Installing Dartium using Homebrew will also install Dartium Content Shell.
+You can then run Content Shell using `content_shell`.
+
 ## Updating
 
 Simply run:
