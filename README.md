@@ -33,6 +33,15 @@ brew install dartium
 brew linkapps
 ```
 
+## Dev Releases
+
+To install dev channel releases, instead of the stable ones, add a `--devel`
+flag after the brew commands:
+
+```shell
+brew install dart --devel
+```
+
 ## Updating
 
 Simply run:
