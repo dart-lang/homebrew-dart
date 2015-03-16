@@ -8,14 +8,14 @@ class Dartium < Formula
   sha256 '24527244a9a35bb74030762e415acd387c1c3aad50ca259d1f55accff0a397b4'
 
   devel do
-    version '1.9.0-dev.10.4'
-    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/44314/dartium/dartium-macos-ia32-release.zip'
-    sha256 '3465735906fc4c31449652e9992a07ff532d36ef7ec93463d772a22441e50a9a'
+    version '1.9.0-dev.10.7'
+    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/44500/dartium/dartium-macos-ia32-release.zip'
+    sha256 'ab6c2aa49a454ddd67393f7dbf67786080fb17ac8d7c907394340de04f9189c2'
 
     resource 'content_shell' do
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/44314/dartium/content_shell-macos-ia32-release.zip'
-      version '1.9.0-dev.10.4'
-      sha256 '724e4b39715a34083102dd7afd791e6b7de535060103e759b9618c3057456525'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/44500/dartium/content_shell-macos-ia32-release.zip'
+      version '1.9.0-dev.10.7'
+      sha256 '34ddbc151102440ddb6419ecd218550b27007010b9db21102505da36863b5247'
     end
   end
 
