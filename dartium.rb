@@ -3,9 +3,9 @@ require 'formula'
 class Dartium < Formula
   homepage "https://www.dartlang.org"
 
-  version '1.8.5'
-  url 'https://storage.googleapis.com/dart-archive/channels/stable/release/42828/dartium/dartium-macos-ia32-release.zip'
-  sha256 '24527244a9a35bb74030762e415acd387c1c3aad50ca259d1f55accff0a397b4'
+  version '1.9.1'
+  url 'https://storage.googleapis.com/dart-archive/channels/stable/release/44672/dartium/dartium-macos-ia32-release.zip'
+  sha256 '071f65eb0167ff64f5deefae3bc9cf94b8264aa68395cb37ed0097bb3f8a82c4'
 
   devel do
     version '1.9.0-dev.10.13'
@@ -20,9 +20,9 @@ class Dartium < Formula
   end
 
   resource 'content_shell' do
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/42828/dartium/content_shell-macos-ia32-release.zip'
-    version '1.8.5'
-    sha256 'a74c247cff7a33470956141afc3ca66ac8f99f23087964391bfd005d73da8b53'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/44672/dartium/content_shell-macos-ia32-release.zip'
+    version '1.9.1'
+    sha256 'aaecaf36c15763306fc352920f580ebbf68bb82cd9bac4e3b21647fde660305c'
   end
 
   def shim_script target
