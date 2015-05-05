@@ -28,7 +28,7 @@ class Dartium < Formula
   def shim_script target
     <<-EOS.undent
       #!/bin/bash
-      "#{prefix}/#{target}" "$@"
+      exec "#{prefix}/#{target}" "$@"
     EOS
   end
 
