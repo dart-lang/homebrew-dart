@@ -8,14 +8,14 @@ class Dartium < Formula
   sha256 '371420feeb4105af9f1b19dd876e8c1680a1443212653a50f8ec482ab6a3821b'
 
   devel do
-    version '1.10.0-dev.1.10'
-    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/45369/dartium/dartium-macos-ia32-release.zip'
-    sha256 '5dce3670bc450fc05efb2a8ba516a20b331a64eb2d0d0e60f96c24307d7dc1c7'
+    version '1.11.0-dev.0.0'
+    url 'https://storage.googleapis.com/dart-archive/channels/dev/release/45519/dartium/dartium-macos-ia32-release.zip'
+    sha256 'a11e016297036163c44c15f562a383d91307933442aaaf79813372f574183124'
 
     resource 'content_shell' do
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/45369/dartium/content_shell-macos-ia32-release.zip'
-      version '1.10.0-dev.1.10'
-      sha256 'a1e56f8f639927ce76f0f248b1e63b4ef4466ad7d8ee88a641be94345e0703e4'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/45519/dartium/content_shell-macos-ia32-release.zip'
+      version '1.11.0-dev.0.0'
+      sha256 '8abd1508fdf12e5b2070753b19600faa90a9f3363e4bc20a035880bcee5e82fc'
     end
   end
 
@@ -28,7 +28,7 @@ class Dartium < Formula
   def shim_script target
     <<-EOS.undent
       #!/bin/bash
-      exec "#{prefix}/#{target}" "$@"
+      "#{prefix}/#{target}" "$@"
     EOS
   end
 
