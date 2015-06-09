@@ -14,14 +14,12 @@ class Dartium < Formula
 
     resource 'content_shell' do
       url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0-dev.5.0/dartium/content_shell-macos-ia32-release.zip'
-      version '1.11.0-dev.5.0'
       sha256 'c82d531066cbbda3c2b44a242c2c08a4d4e7e7bba1520b295468ac7740225249'
     end
   end
 
   resource 'content_shell' do
     url 'https://storage.googleapis.com/dart-archive/channels/stable/release/45692/dartium/content_shell-macos-ia32-release.zip'
-    version '1.10.1'
     sha256 '7b50870dbe73bc7200f9d3da43c0fc7e301175cb7ac80c90e8d7ddc423f0b1b6'
   end
 
@@ -43,7 +41,11 @@ class Dartium < Formula
   end
 
   def caveats; <<-EOS.undent
-     To use with IntelliJ, set the Dartium execute home to:
+    DEPRECATED
+      In the future, use the `dart` formula using
+      `--with-dartium` and/or `--with-content-shell`
+
+    To use with IntelliJ, set the Dartium execute home to:
         #{prefix}/Chromium.app
     EOS
   end
