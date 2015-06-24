@@ -81,7 +81,7 @@ class Dart < Formula
 
     --with-dartium:
       To use with IntelliJ, set the Dartium execute home to:
-        #{prefix}/Chromium.app
+        #{opt_prefix}/Chromium.app
     EOS
   end
 
