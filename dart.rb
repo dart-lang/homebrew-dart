@@ -16,25 +16,25 @@ class Dart < Formula
   option 'with-dartium', 'Download and install Dartium -- Chromium with Dart'
 
   devel do
-    version '1.11.0-dev.5.6'
+    version '1.11.0'
     if MacOS.prefer_64_bit?
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0-dev.5.6/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '363cd47277dc298254e934e4d8ce2c72662ffd4238c198cdb606efa474429da0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0/sdk/dartsdk-macos-x64-release.zip'
+      sha256 '9e1571a236895389c72a151677b9dfe5a0dca9728402224a63ca78312e1a37f3'
     else
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0-dev.5.6/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '774ca7dfb3db8ac627787ba3dc6f7bbeeb8292944200a40458e89626497ce40a'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 'a361d8287f05c37563a562594e86e97d0ad218c622ac5f3500a1a05795089849'
     end
 
     resource 'content_shell' do
-      version '1.11.0-dev.5.6'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0-dev.5.6/dartium/content_shell-macos-ia32-release.zip'
-      sha256 '51b6b23826f7c841dc3eb5f49a02c55c60bf267f1e3c62fec1fddbed3d487686'
+      version '1.11.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0/dartium/content_shell-macos-ia32-release.zip'
+      sha256 'ed7e687ce6eb717d195d0c5013f1efe15f9e384fc080fee525eaebbc9e1e6eb9'
     end
 
     resource 'dartium' do
-      version '1.11.0-dev.5.6'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0-dev.5.6/dartium/dartium-macos-ia32-release.zip'
-      sha256 'c07e2999eaa04da11c4d733a395f6eebce4e69e7699da68d03aaeac5ae033428'
+      version '1.11.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.11.0/dartium/dartium-macos-ia32-release.zip'
+      sha256 '59d11a84e096c7959756394737e4370cbe5a483d5b7169cde7b8199b12a07098'
     end
   end
 
