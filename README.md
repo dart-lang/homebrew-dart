@@ -26,10 +26,10 @@ brew install dart
 Tip: Once installed, homebrew will print the path to the Dart SDK. Use this path to configure Dart support
 in your IDE (like WebStorm).
 
-For web developers, we highly recommend Dartium:
+For web developers, we highly recommend Dartium and content shell:
 
 ```
-brew install dartium
+brew install dart --with-dartium --with-content-shell
 brew linkapps
 ```
 
@@ -48,7 +48,7 @@ Simply run:
 
 ```
 brew update
-brew upgrade dart dartium
+brew upgrade dart
 ```
 
 [homebrew]: http://brew.sh/
