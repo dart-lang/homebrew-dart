@@ -33,6 +33,12 @@ brew install dart --with-dartium --with-content-shell
 brew linkapps
 ```
 
+To install Dartium to your Applications:
+
+```
+ditto /usr/local/opt/dart/Chromium.app/ /Applications/Dartium.app/
+```
+
 ## Dev Releases
 
 To install dev channel releases, instead of the stable ones, add a `--devel`
