@@ -16,25 +16,25 @@ class Dart < Formula
   option 'with-dartium', 'Download and install Dartium -- Chromium with Dart'
 
   devel do
-    version '1.13.0-dev.3.1'
+    version '1.13.0-dev.5.0'
     if MacOS.prefer_64_bit?
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.3.1/sdk/dartsdk-macos-x64-release.zip'
-      sha256 'bd36ef63b5e6e8bdd693a742ad43a9ac389bbb172c5e01d47cef26745940de4a'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.5.0/sdk/dartsdk-macos-x64-release.zip'
+      sha256 '0e2cc33f0ef67ced356c314ee4b0975b7edbb785624a0d03d3a4e2be84affcb7'
     else
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.3.1/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '4fac5786d44cfd438cdcfba09b2db009473f9338dcca2c50fda5dde3a852b28b'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.5.0/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 '2b739c4846d84b9ed9b6423c5e65398575825ad06bfca90987e3bb02e431597e'
     end
 
     resource 'content_shell' do
-      version '1.13.0-dev.3.1'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.3.1/dartium/content_shell-macos-ia32-release.zip'
-      sha256 'fc71c058f203bbbdfe67cfadd4f644af08b6863a2d826fea4ee1291cd7086f54'
+      version '1.13.0-dev.5.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.5.0/dartium/content_shell-macos-ia32-release.zip'
+      sha256 '330b8c9724f3aafa02b413b1a2d258b301cb3ce20658db88df512a097a1dec46'
     end
 
     resource 'dartium' do
-      version '1.13.0-dev.3.1'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.3.1/dartium/dartium-macos-ia32-release.zip'
-      sha256 '626e6d51fddf836334a0abddbed3f8951b2cb08b0d10c00453cc00b0e3914ac4'
+      version '1.13.0-dev.5.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.5.0/dartium/dartium-macos-ia32-release.zip'
+      sha256 'c37ccb21f4f2f9dd3260ed8712f2ef4f60b0935bab73e10c7e176954e79c181b'
     end
   end
 
@@ -53,7 +53,7 @@ class Dart < Formula
   def install
     libexec.install Dir['*']
     bin.install_symlink "#{libexec}/bin/dart"
-    bin.write_exec_script Dir["#{libexec}/bin/{pub,docgen,dart?*}"]
+    bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
 
     if build.with? 'dartium'
       dartium_binary = 'Chromium.app/Contents/MacOS/Chromium'
