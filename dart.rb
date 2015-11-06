@@ -16,25 +16,25 @@ class Dart < Formula
   option 'with-dartium', 'Download and install Dartium -- Chromium with Dart'
 
   devel do
-    version '1.13.0-dev.7.9'
+    version '1.13.0-dev.7.10'
     if MacOS.prefer_64_bit?
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.9/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '60322810625d848d40b44be20f8ec316051deb106ad14f022e4bbdec8501cfdb'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.10/sdk/dartsdk-macos-x64-release.zip'
+      sha256 'fbfacb4b8a8391d4a7cbfb30f1a4ff47f93d23e24325b1d5ea1aef89df001e78'
     else
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.9/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '1c7b46843a1ae58e64c98410320fbfa5e752f4dda21d76e226cf835cb18c2486'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.10/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 'c620ad6706fe1b477d82eee3ae8a1e122b1a8bca72008b54cd84a520d3fe0296'
     end
 
     resource 'content_shell' do
-      version '1.13.0-dev.7.9'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.9/dartium/content_shell-macos-ia32-release.zip'
-      sha256 'b1f4b8f360a1377749844ced59d10df6a90248f41753fe5f84d90961a223d612'
+      version '1.13.0-dev.7.10'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.10/dartium/content_shell-macos-ia32-release.zip'
+      sha256 'f372dea6f631d7b3e39549e2f85fc6290beb70d8af62f2125ff118b1cf090fe0'
     end
 
     resource 'dartium' do
-      version '1.13.0-dev.7.9'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.9/dartium/dartium-macos-ia32-release.zip'
-      sha256 '1c565e6dea59531e22e526254793c981a516c7fde6af17a429ff174f49a58190'
+      version '1.13.0-dev.7.10'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.13.0-dev.7.10/dartium/dartium-macos-ia32-release.zip'
+      sha256 '999e347df8dff9f914de15add5935d4e24dd9d10933be98ec96ed83a5dd1a5b8'
     end
   end
 
