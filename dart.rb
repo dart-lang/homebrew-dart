@@ -16,25 +16,25 @@ class Dart < Formula
   option 'with-dartium', 'Download and install Dartium -- Chromium with Dart'
 
   devel do
-    version '1.14.0-dev.6.0'
+    version '1.14.0-dev.7.0'
     if MacOS.prefer_64_bit?
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.6.0/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '5afa8382a3a9c2d540867461ca73d76e3eaac332055cc2f770ac3a87ad368183'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.7.0/sdk/dartsdk-macos-x64-release.zip'
+      sha256 '7ae90e80b59543b5b458a5ab469f59df567cc13466267ec004cf81d6159fa896'
     else
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.6.0/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '3d7426f2369ce65c353e4d56b6a1ee6348befd1f0b7e79508450f5090cf4a2be'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.7.0/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 'b4bbbe10abd4b7a54beebe86799cb1c05350e36a59683a686931ce9f16a254fa'
     end
 
     resource 'content_shell' do
-      version '1.14.0-dev.6.0'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.6.0/dartium/content_shell-macos-ia32-release.zip'
-      sha256 'b16aa6db215922e6fd60fa7c68329aef7f27732d6cba67c6d77e94dc7c0a5897'
+      version '1.14.0-dev.7.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.7.0/dartium/content_shell-macos-ia32-release.zip'
+      sha256 '690c13bdfb54b6f4f34476818e4d2545565fd15a43f2dc464bbe9b913c3729dc'
     end
 
     resource 'dartium' do
-      version '1.14.0-dev.6.0'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.6.0/dartium/dartium-macos-ia32-release.zip'
-      sha256 '1f868868fd66502afb62fa950203e8cbbff0b528f6b7a19f0c8e1e585bbb1784'
+      version '1.14.0-dev.7.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.14.0-dev.7.0/dartium/dartium-macos-ia32-release.zip'
+      sha256 'e5273b6e1af5f7f50ea7fb02f02783338d00b57412ded3af219cec35986669fc'
     end
   end
 
