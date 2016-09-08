@@ -3,13 +3,13 @@ require 'formula'
 class Dart < Formula
   homepage 'https://www.dartlang.org/'
 
-  version '1.19.0'
+  version '1.19.1'
   if MacOS.prefer_64_bit?
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.0/sdk/dartsdk-macos-x64-release.zip'
-    sha256 'cd60c7376f6030d02888416667b54b01c71d06b5ad3c33dee2e0255302ee6aa2'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.1/sdk/dartsdk-macos-x64-release.zip'
+    sha256 'bbcbf5a6c566b3a1a057129158982f4fba54c848e0c3ed4fcee7fdf85d53d885'
   else
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.0/sdk/dartsdk-macos-ia32-release.zip'
-    sha256 '6d75355a68236869d5252ed774a510de44a258c12224b2a04242e4914663fd49'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.1/sdk/dartsdk-macos-ia32-release.zip'
+    sha256 'ff28e48fff2b8da23b52a7abf8c4dd81548ad2fd4582d7bcf40eb57bcccaa39a'
   end
 
   option 'with-content-shell', 'Download and install content_shell -- headless Dartium for testing'
@@ -39,15 +39,15 @@ class Dart < Formula
   end
 
   resource 'content_shell' do
-    version '1.19.0'
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.0/dartium/content_shell-macos-ia32-release.zip'
-    sha256 '120da4444bb33145e46617ef340ca0c9e8c62292fccd363ad17f100b1b83a456'
+    version '1.19.1'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.1/dartium/content_shell-macos-ia32-release.zip'
+    sha256 '6ad4520bdf5a3034ebf63aec915a5a883b5806c6949f9e42d5da486651a50fc1'
   end
 
   resource 'dartium' do
-    version '1.19.0'
-    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.0/dartium/dartium-macos-ia32-release.zip'
-    sha256 '27ea5c85780665ce1b417dc05dac988cfd3e20bcde422b5d0c5c0a4f21bd05e0'
+    version '1.19.1'
+    url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.19.1/dartium/dartium-macos-ia32-release.zip'
+    sha256 'e7861c2228a82b95524f3dd4ac32ca0d862fd11ba6fee8458bd549eb8cdf2fcc'
   end
 
   def install
