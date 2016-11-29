@@ -16,25 +16,25 @@ class Dart < Formula
   option 'with-dartium', 'Download and install Dartium -- Chromium with Dart'
 
   devel do
-    version '1.21.0-dev.9.0'
+    version '1.21.0-dev.10.0'
     if MacOS.prefer_64_bit?
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.9.0/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '95af034ebccdbc47915a663c6af8efe86c1e983ea2b0f03482ce763dc4d694fb'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.10.0/sdk/dartsdk-macos-x64-release.zip'
+      sha256 '0cb2d0b1db7f2648f819d3e00ce101f3151b11e079f7d9dab7bf621452d5f0c3'
     else
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.9.0/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '40f4f232610fa17926d6990acc05a780ec2875f31f2a767c080fc190e85989e3'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.10.0/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 'abda1cbc8967d88ab01471b78d405480b319c5936d0721e75ee7bc1d8fc3a546'
     end
 
     resource 'content_shell' do
-      version '1.21.0-dev.9.0'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.9.0/dartium/content_shell-macos-x64-release.zip'
-      sha256 '478d24fbd09e7a04e4b2b8a5550bed26d4dfe234173f4e9de08b5cd1cddab35a'
+      version '1.21.0-dev.10.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.10.0/dartium/content_shell-macos-x64-release.zip'
+      sha256 '90257f93fd6094bc10a674000f2b5e204e1ebe567283ea20a40b9017294c6439'
     end
 
     resource 'dartium' do
-      version '1.21.0-dev.9.0'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.9.0/dartium/dartium-macos-x64-release.zip'
-      sha256 '11331ae01497678c95f55e3d7d812ab6eceec5a0b60e5d62f2608ca22752301f'
+      version '1.21.0-dev.10.0'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.21.0-dev.10.0/dartium/dartium-macos-x64-release.zip'
+      sha256 'c6fa8dd0176f771ada88af8f453bcc239b53d3c0a927c76705d7f22ae99596a1'
     end
   end
 
