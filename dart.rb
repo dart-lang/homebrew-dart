@@ -16,25 +16,25 @@ class Dart < Formula
   option 'with-dartium', 'Download and install Dartium -- Chromium with Dart'
 
   devel do
-    version '1.22.0-dev.10.5'
+    version '1.22.0-dev.10.6'
     if MacOS.prefer_64_bit?
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.5/sdk/dartsdk-macos-x64-release.zip'
-      sha256 '7ee317cc4a9d5986cec412f9e4528e34a9669eee2d2e46879f8c4bf545715925'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.6/sdk/dartsdk-macos-x64-release.zip'
+      sha256 '9d7e5e5cb7b77e291b4e1a8387857758439f70ff5caaeab6f79202a042413346'
     else
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.5/sdk/dartsdk-macos-ia32-release.zip'
-      sha256 '294d15998466f58b2d2a19418e35b5c9bc339c631b2d90c6f5358dab6eb13332'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.6/sdk/dartsdk-macos-ia32-release.zip'
+      sha256 '0733172e8eae945256a24498a6ada737b8676c9ec516c7a100c6b2e4b5386d10'
     end
 
     resource 'content_shell' do
-      version '1.22.0-dev.10.5'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.5/dartium/content_shell-macos-x64-release.zip'
-      sha256 '4839cb1b399cd052ee583d69973fefb818bde4af1e2aa18af25732f276292b70'
+      version '1.22.0-dev.10.6'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.6/dartium/content_shell-macos-x64-release.zip'
+      sha256 '9473811eb17b23584684f634f37b1a99af56491950f85e435738c0b9694e6c5f'
     end
 
     resource 'dartium' do
-      version '1.22.0-dev.10.5'
-      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.5/dartium/dartium-macos-x64-release.zip'
-      sha256 '39f4bdba3fb4333fb0209a381d80f303c1e72d10f0d76a8b169d12208ed6257e'
+      version '1.22.0-dev.10.6'
+      url 'https://storage.googleapis.com/dart-archive/channels/dev/release/1.22.0-dev.10.6/dartium/dartium-macos-x64-release.zip'
+      sha256 '899fbab8d40a4d626e0074625c4762150e215026481aba23b4cd629f8c45195f'
     end
   end
 
