@@ -30,7 +30,6 @@ For web developers, we highly recommend Dartium and content shell:
 
 ```
 brew install dart --with-dartium --with-content-shell
-brew linkapps
 ```
 
 To install Dartium to your Applications:
