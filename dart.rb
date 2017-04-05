@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.23.0-dev.11.4"
+    version "1.23.0-dev.11.5"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.4/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "76d393e19e367930635d29fff0d5d8b783517a004b5d409472c6b178208c0288"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "8f294c6f637fe11ee06bcebcb981cc3f737f2e3456eccc306bfea0dbc43d1e08"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.4/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "5b3ba0de78973ce20f2335608a7f324717b78489b5d7815602945810bd6404d1"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "8d1676e8d77ce24e0843d30d6602c737d8632ef51b3e8807e4cae83923ff8824"
     end
 
     resource "content_shell" do
-      version "1.23.0-dev.11.4"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.4/dartium/content_shell-macos-x64-release.zip"
-      sha256 "a2c152edc296d1e231980a20ee613465a8a0a52458e0a92ac48826b81253c8ed"
+      version "1.23.0-dev.11.5"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/dartium/content_shell-macos-x64-release.zip"
+      sha256 "584f68bdfc734b477f6b1b73bfbc5e0a2dd71362cbf7bc76af347e346ee06c59"
     end
 
     resource "dartium" do
-      version "1.23.0-dev.11.4"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.4/dartium/dartium-macos-x64-release.zip"
-      sha256 "0c9d509dde3785e33b4275d00bfea60606b50f5d7fe2f621c15c37f600cecdec"
+      version "1.23.0-dev.11.5"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/dartium/dartium-macos-x64-release.zip"
+      sha256 "cfa479975cde55cd6eb56614bf14598da05556088ec96fbebf8a983393cbeac2"
     end
   end
 
