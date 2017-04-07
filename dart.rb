@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.23.0-dev.11.5"
+    version "1.23.0-dev.11.6"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "8f294c6f637fe11ee06bcebcb981cc3f737f2e3456eccc306bfea0dbc43d1e08"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.6/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "cb17d36f09b653f0306ba9b70455d10a00bd2e7f7fab290ad70059156b242f8e"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "8d1676e8d77ce24e0843d30d6602c737d8632ef51b3e8807e4cae83923ff8824"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.6/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "1a7bab0c20704996225165459a2d7b03423308da339119575fba1a4e64b0aa06"
     end
 
     resource "content_shell" do
-      version "1.23.0-dev.11.5"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/dartium/content_shell-macos-x64-release.zip"
-      sha256 "584f68bdfc734b477f6b1b73bfbc5e0a2dd71362cbf7bc76af347e346ee06c59"
+      version "1.23.0-dev.11.6"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.6/dartium/content_shell-macos-x64-release.zip"
+      sha256 "44719a770409eb97ad35b78ee0fd99f711fba8409e04b2866ce984fde58f10e1"
     end
 
     resource "dartium" do
-      version "1.23.0-dev.11.5"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.5/dartium/dartium-macos-x64-release.zip"
-      sha256 "cfa479975cde55cd6eb56614bf14598da05556088ec96fbebf8a983393cbeac2"
+      version "1.23.0-dev.11.6"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.23.0-dev.11.6/dartium/dartium-macos-x64-release.zip"
+      sha256 "0f0e740663da0a57831ddd774362706cb9bc22a77aafdaab5625c81f7819a7d1"
     end
   end
 
