@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.24.0-dev.2.0"
+    version "1.24.0-dev.3.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.2.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "f3e5fee2cdef620dda2bf8b324fe892a8e0c8fa627c057567b8d6ee8fae58edc"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "1fe772fed39d1e6658401ba78716cdaa71e22a4ee590f4b3cd84450d607c127d"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.2.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "8bdbe633aa107d1d3a0eb8805a6bc9a92a75ffa2c6beecf3384d35661d46dac2"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "e2df81046b31bd4940a3a2d1d9bedee4dfbe21af74c7e68f9704fc555059e298"
     end
 
     resource "content_shell" do
-      version "1.24.0-dev.2.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.2.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "378bdd765ab3d92295838871ea78e1febde08227c5346d856ccdd7d621dfec93"
+      version "1.24.0-dev.3.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "01124d2fa65906400b7998596f46512fee5865eab5052c205e239b91070ce564"
     end
 
     resource "dartium" do
-      version "1.24.0-dev.2.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.2.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "befb5c9468ffbb5d6ba5943f4daf605917c91ed2ec7946f9d71289d7f098b9bd"
+      version "1.24.0-dev.3.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "f984ab07ac9bdb2b9b4b823651e3b9fbd1fd9b9b2828d498e9edda6ebc0b1db7"
     end
   end
 
