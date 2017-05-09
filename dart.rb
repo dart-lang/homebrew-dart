@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.24.0-dev.3.0"
+    version "1.24.0-dev.4.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "1fe772fed39d1e6658401ba78716cdaa71e22a4ee590f4b3cd84450d607c127d"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.4.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "56bf34f7e41e8804803d87b8b0246499b20d85b91b09064519043549d6604df0"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "e2df81046b31bd4940a3a2d1d9bedee4dfbe21af74c7e68f9704fc555059e298"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.4.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "7e742ad61b8db86555091aeaf568e47fb58c312994ff4cf584169b2a4c988c46"
     end
 
     resource "content_shell" do
-      version "1.24.0-dev.3.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "01124d2fa65906400b7998596f46512fee5865eab5052c205e239b91070ce564"
+      version "1.24.0-dev.4.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.4.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "5ef52e67fb6e97930ccba7466c8af2e8fdc324db9fc358cf1b1ba4c74200bb45"
     end
 
     resource "dartium" do
-      version "1.24.0-dev.3.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.3.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "f984ab07ac9bdb2b9b4b823651e3b9fbd1fd9b9b2828d498e9edda6ebc0b1db7"
+      version "1.24.0-dev.4.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.4.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "f626a925879c454aeb0b8d9282ec292b34146ec8dbeb07946a241341cb66cba1"
     end
   end
 
