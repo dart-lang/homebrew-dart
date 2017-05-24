@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.24.0-dev.5.0"
+    version "1.24.0-dev.6.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.5.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "d4b57a305cf5de591a59fbc5ced91d5fca2408ff87c2f5c06984154b82be1461"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "a821977c5fb279e0571964047392e36fdccec21b44d4305f0a58eb7a86b878e2"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.5.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "632d0ff37dce299e2f31e5d1bbd4a4f6971c9b2c58dd4304543c841ec4ab132a"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "d51c79693639eb7fad2f7b09773b94b76fb39670d45fc7ac345f7efc3cefb565"
     end
 
     resource "content_shell" do
-      version "1.24.0-dev.5.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.5.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "2ccf57009d8add26f9c7fbdb08eb5174c1ad0e4ceff3e2a3d90f7e9a1aa68b53"
+      version "1.24.0-dev.6.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "79cc899d16f6263243179a3610b29f44deb95146d78e873de50910dd88e72221"
     end
 
     resource "dartium" do
-      version "1.24.0-dev.5.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.5.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "3f9fac40fee4d18d9a17b1a182df0f64e3234d95318446c984fc10c189a5d1ec"
+      version "1.24.0-dev.6.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "a3794d454050626d5bb257597b359d0ba0f6ca2fe2e1e5d97cbd1c7ed1ecc052"
     end
   end
 
