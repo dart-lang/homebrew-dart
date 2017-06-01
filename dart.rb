@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.24.0-dev.6.4"
+    version "1.24.0-dev.6.5"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.4/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "ecac4c6d136ccf5f10c4485498c036b5303445adb3044705d94f3fce26fd28ba"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.5/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "df0b15dc4960fb26d692f615dfaad284f15c17a6fbdb6f957ea2a576a82a00f5"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.4/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "826e8e2deaf3a5bab6c02b77980c3b698c32c2535d90d1adf13732ac4f5153cd"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.5/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "d9fd131cca4a7fff42fe21c3414261e7bd73ab40d034b486ef5fdb18ced18c5a"
     end
 
     resource "content_shell" do
-      version "1.24.0-dev.6.4"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.4/dartium/content_shell-macos-x64-release.zip"
-      sha256 "a471e43cfdaf0565095d092b614e2e46bcab8515618a8a1240bc18a63e98df79"
+      version "1.24.0-dev.6.5"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.5/dartium/content_shell-macos-x64-release.zip"
+      sha256 "1adefc119d3a43d43584e52db33979f895a09ccb0f025f4f04fc086562cba802"
     end
 
     resource "dartium" do
-      version "1.24.0-dev.6.4"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.4/dartium/dartium-macos-x64-release.zip"
-      sha256 "0718c43030660ab90217a5d21dd5575f9f319846ce4dbfb9708559d99a6b69bc"
+      version "1.24.0-dev.6.5"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.5/dartium/dartium-macos-x64-release.zip"
+      sha256 "e306cae5715ec247e17bb3e6ce95569e79e6e00994f481fd87fb594edb097e3e"
     end
   end
 
