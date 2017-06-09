@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.24.0-dev.6.8"
+    version "1.24.0-dev.6.9"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.8/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "59648fbbaca2058df7d14b0a138fbcb4b771fb48c002edf3e41ca13199a4ed30"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.9/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "9da940c77e2e99f72d4382ad942f1026901b0768fc590b289deb9c74b484ee98"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.8/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "460e4d5f3fbc037d5921cc3de1014b0eddde2631a0b5ac81250c805554d2918b"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.9/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "699b7cb7ae14efbcf4a635139e56999d1461cc8f3d7b4f5ab96baea0b881713f"
     end
 
     resource "content_shell" do
-      version "1.24.0-dev.6.8"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.8/dartium/content_shell-macos-x64-release.zip"
-      sha256 "73eff447754004a2365af42e44f57229609ef452dca97ee25849790241ef6256"
+      version "1.24.0-dev.6.9"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.9/dartium/content_shell-macos-x64-release.zip"
+      sha256 "e442329ae6c3154d2a04e37de7fa251168df54cbbb332f2b51e3018b805006dd"
     end
 
     resource "dartium" do
-      version "1.24.0-dev.6.8"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.8/dartium/dartium-macos-x64-release.zip"
-      sha256 "53933b10859f0e5d2722243db00f9862fa2716ab173383b40b27376aa0f5915f"
+      version "1.24.0-dev.6.9"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.24.0-dev.6.9/dartium/dartium-macos-x64-release.zip"
+      sha256 "5eb70d91d21c281389c5c31bda4f642bc5e5a21c84732910a46a8991a15fc0fb"
     end
   end
 
