@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.25.0-dev.0.0"
+    version "1.25.0-dev.1.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.0.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "1128e4d108664307aaa92afb9557ead707bc6654ca33736ebc56f29806a43f0d"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "08a57d9ad8c95fab2e266210c257e18a01001aad229b2347cfc44527c1729d57"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.0.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "c47d0fc02fbf7a574d504b775a19baca2fa8fee9519889564bbd3e0a320aae05"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "ce0b154ba3a937f6e07e0d699f67bb0b39904070cc9b9b0e55d33d3c222dad7b"
     end
 
     resource "content_shell" do
-      version "1.25.0-dev.0.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.0.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "d053cfa76a5968a8b52241c2458e3fe170933cd0825f29bf83b9362e1fe8d34f"
+      version "1.25.0-dev.1.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "2edda5a8dfce3b2a56471c1dc349013fa28b08081f5f64748d0618dfc50e7240"
     end
 
     resource "dartium" do
-      version "1.25.0-dev.0.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.0.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "ce5d638beb5fedaaa2e7b26b6d97c93ded6429c3095c112b3101c0f1d9b6e0a4"
+      version "1.25.0-dev.1.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "679f8d4940fbb557abe51cf31b22eadde10bac84db55c56d1f2e34ec3a3840d6"
     end
   end
 
