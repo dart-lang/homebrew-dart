@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.25.0-dev.1.0"
+    version "1.25.0-dev.2.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "08a57d9ad8c95fab2e266210c257e18a01001aad229b2347cfc44527c1729d57"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.2.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "78ceca2493fdf321039fa50c22094cd7672737106f35c27f5a8d3968c5d4af74"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "ce0b154ba3a937f6e07e0d699f67bb0b39904070cc9b9b0e55d33d3c222dad7b"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.2.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "5cbbea0a07cb11af9649cd58d3d966221e1226d24494882d6703ead2f443d824"
     end
 
     resource "content_shell" do
-      version "1.25.0-dev.1.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "2edda5a8dfce3b2a56471c1dc349013fa28b08081f5f64748d0618dfc50e7240"
+      version "1.25.0-dev.2.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.2.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "55386a1205bd8e21746b5201431fed67fe69db64614a76395d147777d1c308e5"
     end
 
     resource "dartium" do
-      version "1.25.0-dev.1.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.1.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "679f8d4940fbb557abe51cf31b22eadde10bac84db55c56d1f2e34ec3a3840d6"
+      version "1.25.0-dev.2.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.2.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "b6d78efac2b4d3ab2eddf5d0e72b846de4691b1b0a0af16333a4c00740b15864"
     end
   end
 
