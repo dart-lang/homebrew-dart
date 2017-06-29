@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.25.0-dev.3.0"
+    version "1.25.0-dev.4.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.3.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "262ab14f532bc53705b43a041dae7e5e1f25cf2eed072a87007d6b2e59542af5"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "9d9b954efd1bc1d69a6551d4f768db6cf872d6e0a485c6ce6670f1c05331b1c1"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.3.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "0718b0f5e83578ca4237e4c2808c098a1359a170ca8f54ca4f2f7d5259a1cf00"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "761ca091f532ec0ca091f6b162897a5804e64974665df949ee498162617671dd"
     end
 
     resource "content_shell" do
-      version "1.25.0-dev.3.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.3.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "760909ccb450a814aa31e383ae8f15fdbded23da2b64e95f408f2e89808096a5"
+      version "1.25.0-dev.4.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "ea8ff95c5b45daf834531aea753d8570f9c83aad518b4877aeac3d9d0aac0920"
     end
 
     resource "dartium" do
-      version "1.25.0-dev.3.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.3.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "fdaa43a1c36b136fff1a5ca8121df753d24e9a13a8bc1be6d5c494c666491250"
+      version "1.25.0-dev.4.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "41d68386111bce977013b86a6154b9b78781cb599367ef330ba2596916092f21"
     end
   end
 
