@@ -12,25 +12,25 @@ class Dart < Formula
   end
 
   devel do
-    version "1.25.0-dev.4.0"
+    version "1.25.0-dev.6.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "9d9b954efd1bc1d69a6551d4f768db6cf872d6e0a485c6ce6670f1c05331b1c1"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.6.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "c3d0e07dc01e9a8c39ef177fbcf4025b3bdd5ef2d5afcd80fbdf4872d01f3880"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "761ca091f532ec0ca091f6b162897a5804e64974665df949ee498162617671dd"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.6.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "4f5b2db024cf33e57a0095617abb0a3ba41b75ee8a3b9e47861f93fdc9e43c2b"
     end
 
     resource "content_shell" do
-      version "1.25.0-dev.4.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/dartium/content_shell-macos-x64-release.zip"
-      sha256 "ea8ff95c5b45daf834531aea753d8570f9c83aad518b4877aeac3d9d0aac0920"
+      version "1.25.0-dev.6.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.6.0/dartium/content_shell-macos-x64-release.zip"
+      sha256 "a5f3a17dbf9daf4e99ba56efa8050754211fc185b8a5384f65db64a1361d10e1"
     end
 
     resource "dartium" do
-      version "1.25.0-dev.4.0"
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.4.0/dartium/dartium-macos-x64-release.zip"
-      sha256 "41d68386111bce977013b86a6154b9b78781cb599367ef330ba2596916092f21"
+      version "1.25.0-dev.6.0"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/1.25.0-dev.6.0/dartium/dartium-macos-x64-release.zip"
+      sha256 "aa8c00d76ecccf6e22c85c9f62d5f70eec87f89871dc1f12c38b7f9023530133"
     end
   end
 
