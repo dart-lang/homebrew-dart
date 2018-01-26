@@ -56,13 +56,13 @@ class Dart < Formula
   end
 
   def shim_script(target)
-    <<-EOS.undent
+    <<~EOS
       #!/usr/bin/env bash
       exec "#{prefix}/#{target}" "$@"
     EOS
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Please note the path to the Dart SDK:
       #{opt_libexec}
 
@@ -73,7 +73,7 @@ class Dart < Formula
   end
 
   test do
-    (testpath/"sample.dart").write <<-EOS.undent
+    (testpath/"sample.dart").write <<~EOS
       void main() {
         print(r"test message");
       }
