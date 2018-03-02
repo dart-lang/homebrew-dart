@@ -12,13 +12,13 @@ class Dart < Formula
   end
 
   devel do
-    version "2.0.0-dev.31.0"
+    version "2.0.0-dev.32.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.31.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "3f5a501c0255ffb3ea47c42fd72d949c4a7aa9cd1fdbe50251cd02ccd68fdcd3"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.32.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "a3f61805bf83292a0760192d338f0d84027890cb07e15413c47d8d2ddb5b3c82"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.31.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "4d7d3d9221615c4e712f0872d36a3c7400f2d748338d84b4431f409fed49dbc2"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.32.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "fa6ad572322cf87373d6c9754a79c471e1ceddc285d50b5e93e55fbe4c512418"
     end
   end
 
@@ -56,13 +56,13 @@ class Dart < Formula
   end
 
   def shim_script(target)
-    <<-EOS.undent
+    <<~EOS
       #!/usr/bin/env bash
       exec "#{prefix}/#{target}" "$@"
     EOS
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Please note the path to the Dart SDK:
       #{opt_libexec}
 
@@ -73,7 +73,7 @@ class Dart < Formula
   end
 
   test do
-    (testpath/"sample.dart").write <<-EOS.undent
+    (testpath/"sample.dart").write <<~EOS
       void main() {
         print(r"test message");
       }
