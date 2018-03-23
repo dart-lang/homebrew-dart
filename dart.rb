@@ -12,13 +12,13 @@ class Dart < Formula
   end
 
   devel do
-    version "2.0.0-dev.40.0"
+    version "2.0.0-dev.42.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.40.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "cac554ae5da11082c600938ea54b30686fe23867fcb1214ef5144939ce90c118"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.42.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "8ab37737ad73e4bd9398e0c5633cde6edcedb87eec42aeaf42ed0504e1dec77e"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.40.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "c314eb4705f3215fee20894cf172ff88c3e991af9196d4ccbe2c04929c4d3c05"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.42.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "eb71e615df043631f537461459f24caeac25f7c00b247374237ded2b00cb6857"
     end
   end
 
@@ -43,12 +43,18 @@ class Dart < Formula
     bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
 
     if build.with? "dartium"
+      if build.devel?
+        odie "dartium is no longer supported with --devel builds. Remove --with-dartium and try again."
+      end
       dartium_binary = "Chromium.app/Contents/MacOS/Chromium"
       prefix.install resource("dartium")
       (bin+"dartium").write shim_script dartium_binary
     end
 
     if build.with? "content-shell"
+      if build.devel?
+        odie "content-shell is no longer supported with --devel builds. Remove --with-content-shell and try again."
+      end
       content_shell_binary = "Content Shell.app/Contents/MacOS/Content Shell"
       prefix.install resource("content_shell")
       (bin+"content_shell").write shim_script content_shell_binary
