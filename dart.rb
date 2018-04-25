@@ -12,13 +12,13 @@ class Dart < Formula
   end
 
   devel do
-    version "2.0.0-dev.49.0"
+    version "2.0.0-dev.50.0"
     if MacOS.prefer_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.49.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "15f2d7cd0975d1e030cf6137074c3e150df0600285ac0d3732df5096cbd43511"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.50.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "48efbd0860434566b556d2f931a20793e1c688bd8ce174f83a1840a27e71f157"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.49.0/sdk/dartsdk-macos-ia32-release.zip"
-      sha256 "411a9d4087247ec1354b0490ab349e977f7c9e633fdbb2851024a1dedab77730"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.50.0/sdk/dartsdk-macos-ia32-release.zip"
+      sha256 "2751953487c26e41f1dcb1ebee14449264821f5f5a4ece90e29c650aa1f104ee"
     end
   end
 
@@ -71,10 +71,6 @@ class Dart < Formula
   def caveats; <<~EOS
     Please note the path to the Dart SDK:
       #{opt_libexec}
-
-    --with-dartium:
-      To use with IntelliJ, set the Dartium execute home to:
-        #{opt_prefix}/Chromium.app
     EOS
   end
 
