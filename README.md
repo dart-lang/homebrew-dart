@@ -1,13 +1,13 @@
 # Dart for Homebrew
 
-This is the official [Dart][] tap for [homebrew][].
+This is the official [Dart][] tap for [Homebrew][].
 
 Mac users can use these formulae to easily install and update Dart SDK and
 Dartium. Both dev and stable channels are supported.
 
 ## Initial setup
 
-If you don't have homebrew, install it from their [homepage][homebrew].
+If you don't have Homebrew, install it from their [homepage][homebrew].
 
 Then, add this tap:
 
@@ -56,5 +56,14 @@ brew update
 brew upgrade dart
 ```
 
-[homebrew]: http://brew.sh/
+## Dart 2 Migration
+
+This tap provides versioned `dart@1` and `dart@2` formulae to assist with the migration to the new major Dart 2 release.
+
+Use `dart@2` in your formula dependencies if you are an application developer and your current version requires Dart 2. Note that this is a temporary measure; once a stable Dart 2.x release is out, the `dart@2` formula will be removed and you can go back to using the regular `dart` dependency.
+
+Use `dart@1` in formulae for legacy applications which are not compatible with Dart 2.
+
+
+[Homebrew]: http://brew.sh/
 [dart]: https://www.dartlang.org
