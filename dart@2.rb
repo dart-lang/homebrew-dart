@@ -1,16 +1,16 @@
 class DartAT2 < Formula
   desc "The Dart 2 SDK"
   homepage "https://www.dartlang.org/"
-  version "2.0.0-dev.64.0"
+  version "2.0.0-dev.63.0"
 
   keg_only :versioned_formula
 
   if MacOS.prefer_64_bit?
-    url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.64.0/sdk/dartsdk-macos-x64-release.zip"
-    sha256 "52ea77f802ea05585f2fdc8d2e2e925dd2cf06c11e426ae8e1ff43c3158c5f16"
+    url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.63.0/sdk/dartsdk-macos-x64-release.zip"
+    sha256 "eeb564025cc5b99d56c87df8f2b5b17c5db57adf26dc05a8f9abe2a7a6da8641"
   else
-    url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.64.0/sdk/dartsdk-macos-ia32-release.zip"
-    sha256 "46646bc7f4942aa4e7dc108415381a83be74e4012a70eb5c04bc97bcca436f25"
+    url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.0.0-dev.63.0/sdk/dartsdk-macos-ia32-release.zip"
+    sha256 "8ed3728e1c815b0e045ee785bb163fadb385f053dd773408d7a1c63e443df5a4"
   end
 
   def install
