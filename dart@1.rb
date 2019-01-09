@@ -5,7 +5,7 @@ class DartAT1 < Formula
 
   keg_only :versioned_formula
 
-  if MacOS.prefer_64_bit?
+  if Hardware::CPU.is_64_bit?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/1.24.3/sdk/dartsdk-macos-x64-release.zip"
     sha256 "3419869401184d1ebf44e8947de36ac83ff614097c2c52a80792e89a25c18cd8"
   else
