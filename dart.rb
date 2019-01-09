@@ -3,7 +3,7 @@ class Dart < Formula
   homepage "https://www.dartlang.org/"
 
   version "2.1.0"
-  if MacOS.prefer_64_bit?
+  if Hardware::CPU.is_64_bit?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.1.0/sdk/dartsdk-macos-x64-release.zip"
     sha256 "5576013b2d5e03f3d8cb85a6cd8820fec2c9a856c1510c0666ff2157065aa76a"
   else
@@ -13,7 +13,7 @@ class Dart < Formula
 
   devel do
     version "2.1.1-dev.0.1"
-    if MacOS.prefer_64_bit?
+    if Hardware::CPU.is_64_bit?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.1.1-dev.0.1/sdk/dartsdk-macos-x64-release.zip"
       sha256 "1ea3708c05aa9ead81783a0098c23a964ae081787f7f5d064d66aabefca15bb2"
     else
