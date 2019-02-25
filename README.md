@@ -33,6 +33,13 @@ flag after the brew commands:
 ```shell
 brew install dart --devel
 ```
+## Old Releases
+
+You could install 2.0.0 version instead of last stable release via
+
+```shell
+brew install dart@2.0.0
+```
 
 ## Updating
 
