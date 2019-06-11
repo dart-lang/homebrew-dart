@@ -43,5 +43,12 @@ brew update
 brew upgrade dart
 ```
 
+## SDK path
+
+Many tools, such as editors, ask you to specify the Dart SDK installation directory.
+After installing via homebrew you can use the path `HOMEBREW_INSTALL/opt/dart/libexec`,
+where `HOMEBREW_INSTALL` is the path to your homebrew installation directory (running
+`brew --prefix` on the command line will display it).
+
 [homebrew]: http://brew.sh/
 [dart]: https://www.dartlang.org
