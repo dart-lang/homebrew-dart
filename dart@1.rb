@@ -1,6 +1,6 @@
 class DartAT1 < Formula
   desc "The legacy Dart 1 SDK"
-  homepage "https://www.dartlang.org/"
+  homepage "https://dart.dev"
   version "1.24.3"
 
   keg_only :versioned_formula

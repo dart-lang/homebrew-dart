@@ -51,4 +51,4 @@ where `HOMEBREW_INSTALL` is the path to your homebrew installation directory (ru
 `brew --prefix` on the command line will display it).
 
 [homebrew]: http://brew.sh/
-[dart]: https://www.dartlang.org
+[dart]: https://dart.dev
