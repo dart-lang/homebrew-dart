@@ -1,6 +1,6 @@
 class Dart < Formula
   desc "The Dart SDK"
-  homepage "https://www.dartlang.org/"
+  homepage "https://dart.dev"
 
   version "2.7.1"
   if OS.mac?
@@ -25,25 +25,25 @@ class Dart < Formula
   end
 
   devel do
-    version "2.8.0-dev.10.0"
+    version "2.8.0-dev.11.0"
     if OS.mac?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.10.0/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "5ade0adc9c3a6da443e3dc0e41e1df6b158aaa7aaee1102dcec9958f078cd406"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.11.0/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "41446debff8a3a70ec464cb3d7a07cd1454eb07161b32b23a1a6113911448940"
     elsif OS.linux? && Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.10.0/sdk/dartsdk-linux-x64-release.zip"
-        sha256 "74b52624a524a6f65da52d8b170165dc51424cc0c66ad15a4af556f549c2a09f"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.11.0/sdk/dartsdk-linux-x64-release.zip"
+        sha256 "4fcef53bb06161bec079d4c1cc93fc29bece8c437cfdffb9aa8d3a115837f6cd"
       else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.10.0/sdk/dartsdk-linux-ia32-release.zip"
-        sha256 "d224c979e25ba041f57dbd2ea6b6d8601eda8e5b16d95e4547f03b972579b342"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.11.0/sdk/dartsdk-linux-ia32-release.zip"
+        sha256 "3d2bf174ad788ff2b89f1e37777938d9a5ca96fbf7a1999abc1b4136add3a466"
       end
     elsif OS.linux? && Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.10.0/sdk/dartsdk-linux-arm64-release.zip"
-        sha256 "7bfb5ca4a7d36545050b0d6681aea292b294a4bf45d23f0979e6c0942bbbb1a0"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.11.0/sdk/dartsdk-linux-arm64-release.zip"
+        sha256 "a7975e2f536c00a5aebd6dc906d1d144aba097d76cf362fa5702ba755b80d7ed"
       else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.10.0/sdk/dartsdk-linux-arm-release.zip"
-        sha256 "46a6700409d5b577a40a87a0cfe1e0299106e5bea458c15e9e5040c43e935ca0"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.11.0/sdk/dartsdk-linux-arm-release.zip"
+        sha256 "866459bf25b27b0c0f74cfc31fa4ceec8fe56427f6e72da79a8f2ec74c89c614"
       end
     end
   end
@@ -61,9 +61,10 @@ class Dart < Formula
     EOS
   end
 
-  def caveats; <<~EOS
-    Please note the path to the Dart SDK:
-      #{opt_libexec}
+  def caveats
+    <<~EOS
+      Please note the path to the Dart SDK:
+        #{opt_libexec}
     EOS
   end
 
