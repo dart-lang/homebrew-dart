@@ -2,6 +2,8 @@ class Dart < Formula
   desc "The Dart SDK"
   homepage "https://dart.dev"
 
+  conflicts_with "dart-beta", :because => "dart-beta ships the same binaries"
+
   version "2.7.2"
   if OS.mac?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.7.2/sdk/dartsdk-macos-x64-release.zip"
