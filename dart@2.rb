@@ -18,13 +18,6 @@ class DartAT2 < Formula
     bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
   end
 
-  def shim_script(target)
-    <<~EOS
-      #!/usr/bin/env bash
-      exec "#{prefix}/#{target}" "$@"
-    EOS
-  end
-
   def caveats; <<~EOS
     The dart@2 tap is now unneeded.  Both stable and dev versions of the regular dart tap are on Dart 2 now.
     The dart@2 tap will be removed at some point in the future.

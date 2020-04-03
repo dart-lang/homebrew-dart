@@ -32,13 +32,6 @@ class DartBeta < Formula
     bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
   end
 
-  def shim_script(target)
-    <<~EOS
-      #!/usr/bin/env bash
-      exec "#{prefix}/#{target}" "$@"
-    EOS
-  end
-
   def caveats
     <<~EOS
       Please note the path to the Dart SDK:
