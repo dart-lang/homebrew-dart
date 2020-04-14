@@ -4,7 +4,7 @@ class DartBeta < Formula
 
   conflicts_with "dart", :because => "dart ships the same binaries"
 
-  version "2.8.0-dev.18.0"
+  version "2.8.0-dev.20.7"
   if OS.mac?
     url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.8.0-dev.18.0/sdk/dartsdk-macos-x64-release.zip"
     sha256 "10c63a444fe382061d9b74d9b609920a42b8c81bcd2c73917734e821faca0416"
