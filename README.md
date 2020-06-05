@@ -27,11 +27,11 @@ in your IDE (like WebStorm).
 
 ## Dev Releases
 
-To install dev channel releases, instead of the stable ones, add a `--devel`
+To install dev channel releases, instead of the stable ones, add a `--head`
 flag after the brew commands:
 
 ```shell
-brew install dart --devel
+brew install dart --head
 ```
 
 ## Updating
