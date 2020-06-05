@@ -26,7 +26,7 @@ class Dart < Formula
     end
   end
 
-  devel do
+  head do
     version "2.9.0-13.0.dev"
     if OS.mac?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.9.0-13.0.dev/sdk/dartsdk-macos-x64-release.zip"
