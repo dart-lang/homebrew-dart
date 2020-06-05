@@ -32,6 +32,7 @@ class Dart < Formula
     end
   end
 
+  conflicts_with "dart-dev", :because => "dart-dev ships the same binaries"
   conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
   if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.16.1/sdk/dartsdk-macos-x64-release.zip"
