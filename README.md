@@ -34,7 +34,15 @@ brew update
 brew upgrade dart
 ```
 
-## Dev Releases
+## Beta Releases
+
+To install beta channel releases, instead of the stable ones, install the dart-beta formula:
+
+```shell
+brew install dart-beta
+```
+
+### Dev Releases
 
 To install dev channel releases, instead of the stable ones, add a `--head`
 flag after the brew commands:
@@ -59,7 +67,7 @@ This installs the latest `2.8` release including security patches, i.e. `2.8.1`.
 To use the specific version in your IDE or in scripts use the SDK you find under `/usr/local/opt/dart@2.8/libexec`.
 
 It is supported to install multiple dart versions in parallel. The `dart` executable 
-in `PATH` will continue to link to the `dart` or `dart-beta` formula. 
+in `PATH` will continue to link to the `dart`, `dart-beta`, or `dart-dev formula. 
 Installing `dart@2.8` alone doesn't add the `dart` executable to the user `PATH`. 
 
 ## SDK path
