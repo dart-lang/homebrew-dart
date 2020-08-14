@@ -25,6 +25,15 @@ brew install dart
 Tip: Once installed, homebrew will print the path to the Dart SDK. Use this path to configure Dart support
 in your IDE (like WebStorm).
 
+## Updating
+
+Simply run:
+
+```
+brew update
+brew upgrade dart
+```
+
 ## Dev Releases
 
 To install dev channel releases, instead of the stable ones, add a `--head`
@@ -34,13 +43,12 @@ flag after the brew commands:
 brew install dart --head
 ```
 
-## Updating
+Note, when updating dev releases, homebrew doesn't always update to the latest version
+(see https://github.com/Homebrew/legacy-homebrew/issues/13197). In order to upgrade to
+the latest dev release, run:
 
-Simply run:
-
-```
-brew update
-brew upgrade dart
+```shell
+brew reinstall dart
 ```
 
 ## SDK path
