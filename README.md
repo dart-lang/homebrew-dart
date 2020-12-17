@@ -51,6 +51,17 @@ the latest dev release, run:
 brew reinstall dart
 ```
 
+## Specific stable versions
+
+To install a specific dart version run `brew install dart@2.8`. 
+This installs the latest `2.8` release including security patches, i.e. `2.8.1`.
+
+To use the specific version in your IDE or in scripts use the SDK you find under `/usr/local/opt/dart@2.8/libexec`.
+
+It is supported to install multiple dart versions in parallel. The `dart` executable 
+in `PATH` will continue to link to the `dart` or `dart-beta` formula. 
+Installing `dart@2.8` alone doesn't add the `dart` executable to the user `PATH`. 
+
 ## SDK path
 
 Many tools, such as editors, ask you to specify the Dart SDK installation directory.
