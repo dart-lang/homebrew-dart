@@ -1,10 +1,12 @@
+# typed: false
+# frozen_string_literal: true
+
 class DartAT212 < Formula
-  desc "The Dart SDK"
+  desc "Dart SDK"
   homepage "https://dart.dev"
 
-  conflicts_with "dart-beta", :because => "dart-beta ships the same binaries"
-
   version "2.12.4"
+  keg_only :versioned_formula
   if OS.mac?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.12.4/sdk/dartsdk-macos-x64-release.zip"
     sha256 "21df868f61389e9410c6893d4afffd6ad3dedb84a4770c206ebc6ee8d302c544"
