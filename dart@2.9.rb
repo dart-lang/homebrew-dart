@@ -1,6 +1,6 @@
 class DartAT29 < Formula
   desc "The Dart SDK"
-  homepage "https://www.dartlang.org/"
+  homepage "https://dart.dev"
 
   version "2.9.3"
   keg_only :versioned_formula
