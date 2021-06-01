@@ -1,4 +1,4 @@
-class Dart < Formula
+class DartAT212 < Formula
   desc "The Dart SDK"
   homepage "https://dart.dev"
 
