@@ -1,5 +1,8 @@
+# typed: false
+# frozen_string_literal: true
+
 class DartAT27 < Formula
-  desc "The Dart SDK"
+  desc "Dart SDK"
   homepage "https://dart.dev"
 
   version "2.7.0"
@@ -43,9 +46,10 @@ class DartAT27 < Formula
     EOS
   end
 
-  def caveats; <<~EOS
-    Please note the path to the Dart SDK:
-      #{opt_libexec}
+  def caveats
+    <<~EOS
+      Please note the path to the Dart SDK:
+        #{opt_libexec}
     EOS
   end
 
