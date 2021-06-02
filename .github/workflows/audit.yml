@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Audit tap
-        run: brew audit
+        run: brew audit --formula dart*.rb
