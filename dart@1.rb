@@ -1,5 +1,8 @@
+# typed: false
+# frozen_string_literal: true
+
 class DartAT1 < Formula
-  desc "The legacy Dart 1 SDK"
+  desc "Legacy Dart 1 SDK"
   homepage "https://dart.dev"
   version "1.24.3"
 
@@ -36,13 +39,13 @@ class DartAT1 < Formula
     if build.with? "dartium"
       dartium_binary = "Chromium.app/Contents/MacOS/Chromium"
       prefix.install resource("dartium")
-      (bin+"dartium").write shim_script dartium_binary
+      ("#{bin}dartium").write shim_script dartium_binary
     end
 
     if build.with? "content-shell"
       content_shell_binary = "Content Shell.app/Contents/MacOS/Content Shell"
       prefix.install resource("content_shell")
-      (bin+"content_shell").write shim_script content_shell_binary
+      ("#{bin}content_shell").write shim_script content_shell_binary
     end
   end
 
@@ -53,9 +56,10 @@ class DartAT1 < Formula
     EOS
   end
 
-  def caveats; <<~EOS
-    Please note the path to the Dart SDK:
-      #{opt_libexec}
+  def caveats
+    <<~EOS
+      Please note the path to the Dart SDK:
+        #{opt_libexec}
     EOS
   end
 

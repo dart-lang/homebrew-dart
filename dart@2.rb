@@ -1,5 +1,8 @@
+# typed: false
+# frozen_string_literal: true
+
 class DartAT2 < Formula
-  desc "The Dart 2 SDK"
+  desc "Dart 2 SDK"
   homepage "https://dart.dev"
   version "2.0.0"
 
@@ -18,12 +21,13 @@ class DartAT2 < Formula
     bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
   end
 
-  def caveats; <<~EOS
-    The dart@2 tap is now unneeded.  Both stable and dev versions of the regular dart tap are on Dart 2 now.
-    The dart@2 tap will be removed at some point in the future.
+  def caveats
+    <<~EOS
+      The dart@2 tap is now unneeded.  Both stable and dev versions of the regular dart tap are on Dart 2 now.
+      The dart@2 tap will be removed at some point in the future.
 
-    Please note the path to the Dart SDK:
-      #{opt_libexec}
+      Please note the path to the Dart SDK:
+        #{opt_libexec}
     EOS
   end
 
