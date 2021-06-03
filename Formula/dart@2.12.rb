@@ -5,7 +5,6 @@ class DartAT212 < Formula
   desc "Dart SDK"
   homepage "https://dart.dev"
 
-  version "2.12.4"
   keg_only :versioned_formula
   if OS.mac?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.12.4/sdk/dartsdk-macos-x64-release.zip"

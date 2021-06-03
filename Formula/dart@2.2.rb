@@ -1,18 +1,17 @@
 # typed: false
 # frozen_string_literal: true
 
-class DartAT20 < Formula
+class DartAT22 < Formula
   desc "Dart SDK"
   homepage "https://dart.dev"
 
-  version "2.0.0"
   keg_only :versioned_formula
   if Hardware::CPU.is_64_bit?
-    url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.0.0/sdk/dartsdk-macos-x64-release.zip"
-    sha256 "7cb9e65cea94ce23b05af4e5224ec416b26c3fb6bf0718778b68f6a73e617cc3"
+    url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.2.0/sdk/dartsdk-macos-x64-release.zip"
+    sha256 "9438afb49b69ac655882036c214e343232fdcd5af24607e6058e2def33261197"
   else
-    url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.0.0/sdk/dartsdk-macos-ia32-release.zip"
-    sha256 "da55f8fce70ca46e97304810406c89f039464be909b9b92f13986ce918da6775"
+    url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.2.0/sdk/dartsdk-macos-ia32-release.zip"
+    sha256 "78a2da74ea83ee092463a9901467492ef885f6e378353b0a44481fdf40ea81c7"
   end
 
   def install

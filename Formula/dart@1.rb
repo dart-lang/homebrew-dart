@@ -4,7 +4,6 @@
 class DartAT1 < Formula
   desc "Legacy Dart 1 SDK"
   homepage "https://dart.dev"
-  version "1.24.3"
 
   keg_only :versioned_formula
 
@@ -20,13 +19,11 @@ class DartAT1 < Formula
   option "with-dartium", "Download and install Dartium -- Chromium with Dart"
 
   resource "content_shell" do
-    version "1.24.3"
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/1.24.3/dartium/content_shell-macos-x64-release.zip"
     sha256 "01efc473c68aed830307d1dafb0cbcbfe77f40ceeeab3ef3ebe58a9912d05b13"
   end
 
   resource "dartium" do
-    version "1.24.3"
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/1.24.3/dartium/dartium-macos-x64-release.zip"
     sha256 "188a038bd6367fddb434338bf6549bae25f5ad89b2f5b462acf8fb1fa20a3916"
   end
