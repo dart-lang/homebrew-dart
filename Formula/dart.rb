@@ -6,6 +6,7 @@ class Dart < Formula
   homepage "https://dart.dev"
 
   head do
+    version "2.14.0-256.0.dev"
     if OS.mac?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.14.0-256.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "08a712aeefbb76477f91dec66201aa71d8b41a6fdcf641f4e34b58e383e368ca"
