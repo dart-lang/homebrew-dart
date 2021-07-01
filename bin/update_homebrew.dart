@@ -35,27 +35,16 @@ void main(List<String> args) async {
   }
 
   await Chain.capture(() async {
-    var tempDir = await Directory.systemTemp.createTemp('update_homebrew');
-
-    try {
-      var repository = tempDir.path;
-
-      await runGit(['clone', 'git@github.com:$githubRepo.git', '.'], repository,
-          gitEnvironment);
-      await writeHomebrewInfo(channel, revision, repository);
-      await runGit([
-        'commit',
-        '-a',
-        '-m',
-        'Updated $channel branch to revision $revision'
-      ], repository, gitEnvironment);
-      if (dryRun) {
-        await runGit(['diff', 'origin/master'], repository, gitEnvironment);
-      } else {
-        await runGit(['push'], repository, gitEnvironment);
-      }
-    } finally {
-      await tempDir.delete(recursive: true);
+    var repository = Platform.script.resolve('..').toFilePath();
+    await writeHomebrewInfo(channel, revision, repository);
+    await runGit(
+        ['commit', '-a', '-m', 'Updated $channel branch to revision $revision'],
+        repository,
+        gitEnvironment);
+    if (dryRun) {
+      await runGit(['diff', 'origin/master'], repository, gitEnvironment);
+    } else {
+      await runGit(['push'], repository, gitEnvironment);
     }
   }, onError: (error, chain) {
     print(error);

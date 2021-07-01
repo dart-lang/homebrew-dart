@@ -8,8 +8,6 @@ const _files = [
   'dartsdk-linux-arm-release.zip',
 ];
 
-const _host = 'https://storage.googleapis.com/dart-archive/channels';
-
 Future<String> _getHash256(
     String channel, String version, String download) async {
   var client = http.Client();
@@ -47,7 +45,7 @@ Future<void> _updateFormula(String channel, File file, String version,
   contents = contents.replaceAllMapped(filesAndHashes, (m) {
     var currentVersion = m.group(1);
     if (currentVersion == version) {
-      throw new ArgumentError(
+      throw ArgumentError(
           'Channel $channel is already at version $version in homebrew.');
     }
     var artifact = m.group(2);
