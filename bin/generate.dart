@@ -25,7 +25,7 @@ void main(List<String> args) async {
   }
 
   if (options.rest.length != 1) {
-    print("Pass in the path to an existing '$dartRbFileName' file.");
+    print("Pass in the path to an existing dart formula.");
     exitCode = 1;
     return;
   }
@@ -39,8 +39,8 @@ void main(List<String> args) async {
     return;
   }
 
-  if (p.basename(existingDartRb) != dartRbFileName) {
-    print("Expected provided path to end with '$dartRbFileName'.");
+  if (p.basename(existingDartRb).endsWith(".rb")) {
+    print("Expected provided path to end with '.rb'.");
     exitCode = 1;
   }
 
