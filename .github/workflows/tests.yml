@@ -3,7 +3,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '**.rb'
+      - .github/workflows/tests.yml
   pull_request:
+    paths:
+      - '**.rb'
+      - .github/workflows/tests.yml
 jobs:
   test-bot:
     strategy:
