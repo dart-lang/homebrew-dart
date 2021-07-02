@@ -12,9 +12,9 @@ part 'src/impl.dart';
 const githubRepo = 'dart-lang/homebrew-dart';
 
 const formulaByChannel = {
-  'beta': 'dart-beta.rb',
-  'dev': 'dart.rb',
-  'stable': 'dart.rb'
+  'beta': 'Formula/dart-beta.rb',
+  'dev': 'Formula/dart.rb',
+  'stable': 'Formula/dart.rb'
 };
 
 Iterable<String> get supportedChannels => formulaByChannel.keys;
