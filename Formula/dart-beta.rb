@@ -2,10 +2,10 @@
 # frozen_string_literal: true
 
 class DartBeta < Formula
-  desc "Dart Beta SDK"
+  desc "Beta SDK"
   homepage "https://dart.dev"
-
   version "2.14.0-188.5.beta"
+
   conflicts_with "dart", because: "dart ships the same binaries"
   if OS.mac?
     url "https://storage.googleapis.com/dart-archive/channels/beta/release/2.14.0-188.5.beta/sdk/dartsdk-macos-x64-release.zip"

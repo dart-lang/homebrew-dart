@@ -2,10 +2,9 @@
 # frozen_string_literal: true
 
 class Dart < Formula
-  desc "Dart SDK"
+  desc "SDK"
   homepage "https://dart.dev"
 
-  version "2.13.4"
   head do
     version "2.14.0-256.0.dev"
     if OS.mac?

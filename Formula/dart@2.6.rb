@@ -5,7 +5,6 @@ class DartAT26 < Formula
   desc "Dart SDK"
   homepage "https://dart.dev"
 
-  version "2.6.1"
   keg_only :versioned_formula
   if OS.mac?
     if Hardware::CPU.is_64_bit?
