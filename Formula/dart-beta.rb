@@ -7,9 +7,12 @@ class DartBeta < Formula
   version "2.14.0-377.7.beta"
 
   conflicts_with "dart", because: "dart ships the same binaries"
-  if OS.mac?
+  if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/beta/release/2.14.0-377.7.beta/sdk/dartsdk-macos-x64-release.zip"
     sha256 "34e0f9af9a45a122b6a3618c3e0f9822e57f09300ca0839b2c4f7138ac476287"
+  elsif OS.mac? && Hardware::CPU.arm?
+    url "https://storage.googleapis.com/dart-archive/channels/beta/release/2.14.0-377.7.beta/sdk/dartsdk-macos-arm64-release.zip"
+    sha256 "dbb2a28b2d3f645171d614d387add13be17b156b09cc20398f2fecf2369accce"
   elsif OS.linux? && Hardware::CPU.intel?
     if Hardware::CPU.is_64_bit?
       url "https://storage.googleapis.com/dart-archive/channels/beta/release/2.14.0-377.7.beta/sdk/dartsdk-linux-x64-release.zip"

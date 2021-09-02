@@ -7,9 +7,12 @@ class Dart < Formula
 
   head do
     version "2.15.0-65.0.dev"
-    if OS.mac?
+    if OS.mac? && Hardware::CPU.intel?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.15.0-65.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "9c71429a806dd2ac7968542771764dd5d1b7c71fd03851c6870eb5c3f687fb1b"
+    elsif OS.mac? && Hardware::CPU.arm?
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.15.0-65.0.dev/sdk/dartsdk-macos-arm64-release.zip"
+      sha256 "754521d866bf2e878d2b4a33be96ece27a6381aa4b73a397d0b349bdd87b4eaa"
     elsif OS.linux? && Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.15.0-65.0.dev/sdk/dartsdk-linux-x64-release.zip"
