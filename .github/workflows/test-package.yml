@@ -13,7 +13,7 @@ env:
   PUB_ENVIRONMENT: bot.github
 
 jobs:
-  analyze:
+  ci:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
