@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
 
-main(List<String> args) {
+main() {
   test('placeholder test', () {});
 }
