@@ -22,7 +22,7 @@ Future<String> _getHash256(
     var media = await api.objects.get('dart-archive', url,
         downloadOptions: DownloadOptions.fullMedia) as Media;
     var hashLine = await ascii.decodeStream(media.stream);
-    return RegExp('[0-9a-fA-F]*').stringMatch(hashLine);
+    return RegExp('[0-9a-fA-F]*').stringMatch(hashLine)!;
   } finally {
     client.close();
   }
