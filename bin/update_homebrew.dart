@@ -26,9 +26,9 @@ void main(List<String> args) async {
     return;
   }
 
-  late Map<String, String> gitEnvironment;
+  Map<String, String> gitEnvironment;
 
-  final key = options['key'] as String?;
+  final key = options['key'] as String;
   if (key != null) {
     final sshWrapper = Platform.script.resolve('ssh_with_key').toFilePath();
     gitEnvironment = {'GIT_SSH': sshWrapper, 'SSH_KEY_PATH': key};
