@@ -45,7 +45,7 @@ void main(List<String> args) async {
   }
 
   await Chain.capture(() async {
-    await writeHomebrewInfo(channel, revision, file.parent.path);
+    await writeHomebrewInfo(channel, revision, file.parent.path, false);
   }, onError: (error, chain) {
     print(error);
     print(chain.terse);

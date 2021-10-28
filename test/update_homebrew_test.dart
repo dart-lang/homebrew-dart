@@ -3,7 +3,11 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:test/test.dart';
+import '../bin/update_homebrew.dart' as bin;
 
-main() {
-  test('placeholder test', () {});
+void main() {
+  test('dry run', () async {
+    await bin
+        .updateHomeBrew(['--dry-run', '--revision=2.14.1', '--channel=stable']);
+  });
 }
