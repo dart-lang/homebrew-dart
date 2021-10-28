@@ -38,7 +38,7 @@ Future<void> updateHomeBrew(List<String> args) async {
 
   final repository = Directory.current.path;
   final key = options['key'] as String?;
-  Map<String, String> gitEnvironment = {};
+  final gitEnvironment = <String, String>{};
   if (key != null) {
     final sshWrapper =
         Directory.current.uri.resolve('ssh_with_key').toFilePath();
