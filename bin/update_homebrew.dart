@@ -9,6 +9,16 @@ import 'package:stack_trace/stack_trace.dart';
 import 'package:update_homebrew/update_homebrew.dart';
 
 void main(List<String> args) async {
+  await Chain.capture(() async {
+    updateHomeBrew(args);
+  }, onError: (error, chain) {
+    print(error);
+    print(chain.terse);
+    exitCode = 1;
+  });
+}
+
+Future<void> updateHomeBrew(List<String> args) async {
   final parser = ArgParser()
     ..addFlag('dry-run', abbr: 'n')
     ..addOption('revision', abbr: 'r')
@@ -22,33 +32,24 @@ void main(List<String> args) async {
     print(
         "Usage: update_homebrew.dart -r version -c channel [-k ssh_key] [-n]\n"
         "  ssh_key should allow pushes to $githubRepo on github");
-    exitCode = 1;
+    exitCode = 64;
     return;
   }
 
-  Map<String, String> gitEnvironment;
-
-  final key = options['key'] as String;
+  final repository = Directory.current.path;
+  final key = options['key'] as String?;
+  final gitEnvironment = <String, String>{};
   if (key != null) {
-    final sshWrapper = Platform.script.resolve('ssh_with_key').toFilePath();
-    gitEnvironment = {'GIT_SSH': sshWrapper, 'SSH_KEY_PATH': key};
+    final sshWrapper =
+        Directory.current.uri.resolve('ssh_with_key').toFilePath();
+    gitEnvironment['GIT_SSH'] = sshWrapper;
+    gitEnvironment['SSH_KEY_PATH'] = key;
   }
-
-  await Chain.capture(() async {
-    var repository = Platform.script.resolve('..').toFilePath();
-    await writeHomebrewInfo(channel, revision, repository);
-    await runGit(
-        ['commit', '-a', '-m', 'Updated $channel branch to revision $revision'],
-        repository,
-        gitEnvironment);
-    if (dryRun) {
-      await runGit(['diff', 'origin/master'], repository, gitEnvironment);
-    } else {
-      await runGit(['push'], repository, gitEnvironment);
-    }
-  }, onError: (error, chain) {
-    print(error);
-    print(chain.terse);
-    exitCode = 1;
-  });
+  await writeHomebrewInfo(channel, revision, repository, dryRun);
+  await runGit(
+      ['commit', '-a', '-m', 'Updated $channel branch to revision $revision'],
+      repository,
+      gitEnvironment,
+      dryRun);
+  await runGit(['push'], repository, gitEnvironment, dryRun);
 }

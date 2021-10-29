@@ -26,16 +26,23 @@ const formulaByChannel = {
 Iterable<String> get supportedChannels => formulaByChannel.keys;
 
 Future<void> writeHomebrewInfo(
-    String channel, String version, String repository) async {
+    String channel, String version, String repository, bool dryRun) async {
   var formula = File(p.join(repository, formulaByChannel[channel]));
   var contents = await formula.readAsString();
   var hashes = await _getHashes(channel, version);
   var updated = updateFormula(channel, contents, version, hashes);
-  await formula.writeAsString(updated, flush: true);
+  if (dryRun) {
+    print(updated);
+  } else {
+    await formula.writeAsString(updated, flush: true);
+  }
 }
 
 Future<void> runGit(List<String> args, String repository,
-    Map<String, String> gitEnvironment) async {
+    Map<String, String> gitEnvironment, bool dryRun) async {
+  if (dryRun) {
+    args = [args[0], '--dry-run', ...args.skip(1)];
+  }
   print("git ${args.join(' ')}");
 
   var result = await Process.run('git', args,
