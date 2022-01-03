@@ -1,9 +1,12 @@
+# typed: false
+# frozen_string_literal: true
+
 class DartDev < Formula
-  desc "The Dart Dev SDK"
+  desc "Dev SDK"
   homepage "https://dart.dev"
 
-  conflicts_with "dart", :because => "dart ships the same binaries"
-  conflicts_with "dart-beta", :because => "dart-beta ships the same binaries"
+  conflicts_with "dart", because: "dart ships the same binaries"
+  conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
 
   version "2.9.0-19.0.dev"
   if OS.mac?
