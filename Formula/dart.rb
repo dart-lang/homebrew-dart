@@ -6,7 +6,7 @@ class Dart < Formula
   homepage "https://dart.dev"
 
   head do
-    version  "2.17.0-246.0.dev"
+    version "2.17.0-246.0.dev"
     if OS.mac? && Hardware::CPU.intel?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.17.0-246.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "925a81f026e44de523d3608bd0e85f9d2a2e2d918a3184fff31020bb6000b93a"
@@ -56,7 +56,6 @@ class Dart < Formula
       sha256 "6eb58d7721bb27827d2bbb0830f3479c0e1d4c257b1c4c802ab8811c7938b02f"
     end
   end
-
 
   def install
     libexec.install Dir["*"]
