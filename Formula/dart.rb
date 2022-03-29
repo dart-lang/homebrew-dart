@@ -32,7 +32,7 @@ class Dart < Formula
     end
   end
 
-  conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
+  conflicts_with "dart-beta", because: "dart-beta ships the same files"
   if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.16.2/sdk/dartsdk-macos-x64-release.zip"
     sha256 "018bc1a063dccd5a1f7c86bf06ce4660aad6a7dc441c10d8271eab1afa48746d"
