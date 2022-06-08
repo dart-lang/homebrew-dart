@@ -2,7 +2,7 @@
 
 This is the official [Dart][] tap for [homebrew][].
 
-Mac users can use these formulae to easily install and update Dart SDK. Both dev and stable channels are supported.
+Mac users can use these formulate to easily install and update Dart SDK. Both dev and stable channels are supported.
 
 ## Initial setup
 
