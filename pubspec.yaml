@@ -5,7 +5,7 @@ environment:
   sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
-  _discoveryapis_commons: ^1.0.2
+  _discoveryapis_commons: ^1.0.5
   args: ^2.3.0
   googleapis: ^9.1.0
   http: ^0.13.4

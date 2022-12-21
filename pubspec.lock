@@ -5,10 +5,10 @@ packages:
     dependency: "direct main"
     description:
       name: _discoveryapis_commons
-      sha256: f3f9fd66bf38748f4afa4621ce94b7da5413726bdfdcc84bdc3ae6cf157a0101
+      sha256: efd530ec09e3fea98529b0d2b192495e252e336c6e93ea8df1875e6e823ebc62
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.4"
+    version: "1.0.5"
   _fe_analyzer_shared:
     dependency: transitive
     description:
