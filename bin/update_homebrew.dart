@@ -22,34 +22,25 @@ Future<void> updateHomeBrew(List<String> args) async {
   final parser = ArgParser()
     ..addFlag('dry-run', abbr: 'n')
     ..addOption('revision', abbr: 'r')
-    ..addOption('channel', abbr: 'c', allowed: supportedChannels)
-    ..addOption('key', abbr: 'k');
+    ..addOption('channel', abbr: 'c', allowed: supportedChannels);
   final options = parser.parse(args);
   final dryRun = options['dry-run'] as bool;
-  final revision = options['revision'] as String;
-  final channel = options['channel'] as String;
-  if ([revision, channel].contains(null)) {
-    print(
-        "Usage: update_homebrew.dart -r version -c channel [-k ssh_key] [-n]\n"
-        "  ssh_key should allow pushes to $githubRepo on github");
+  final revision = options['revision'] as String?;
+  final channel = options['channel'] as String?;
+  if (revision == null || channel == null) {
+    print("Usage: update_homebrew.dart -r version -c channel [-n]");
     exitCode = 64;
     return;
   }
 
   final repository = Directory.current.path;
-  final key = options['key'] as String?;
-  final gitEnvironment = <String, String>{};
-  if (key != null) {
-    final sshWrapper =
-        Directory.current.uri.resolve('ssh_with_key').toFilePath();
-    gitEnvironment['GIT_SSH'] = sshWrapper;
-    gitEnvironment['SSH_KEY_PATH'] = key;
+  if (await writeHomebrewInfo(channel, revision, repository, dryRun)) {
+    await runGit(
+        ['commit', '-a', '-m', 'Updated $channel channel to version $revision'],
+        repository,
+        null,
+        dryRun);
+  } else {
+    print("Channel $channel is up to date at version $revision");
   }
-  await writeHomebrewInfo(channel, revision, repository, dryRun);
-  await runGit(
-      ['commit', '-a', '-m', 'Updated $channel branch to revision $revision'],
-      repository,
-      gitEnvironment,
-      dryRun);
-  await runGit(['push'], repository, gitEnvironment, dryRun);
 }

@@ -17,16 +17,11 @@ String updateFormula(String channel, String contents, String version,
   //  sha256 "<hash>"
   var filesAndHashes = RegExp(
       'channels/$channel/release'
-      r'/(\d[\w\d\-\.]*)/sdk/([\w\d\-\.]+)\"\n(\s+)sha256 \"[\da-f]+\"',
+      r'/\d[\w\d\-\.]*/sdk/([\w\d\-\.]+)\"\n(\s+)sha256 \"[\da-f]+\"',
       multiLine: true);
   return contents.replaceAllMapped(filesAndHashes, (m) {
-    var currentVersion = m.group(1);
-    if (currentVersion == version) {
-      throw ArgumentError(
-          'Channel $channel is already at version $version in homebrew.');
-    }
-    var artifact = m.group(2);
-    var indent = m.group(3);
+    var artifact = m.group(1);
+    var indent = m.group(2);
     return 'channels/$channel/release/$version/sdk/$artifact"\n'
         '${indent}sha256 "${hashes[artifact]}"';
   });

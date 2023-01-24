@@ -25,29 +25,41 @@ const formulaByChannel = {
 
 Iterable<String> get supportedChannels => formulaByChannel.keys;
 
-Future<void> writeHomebrewInfo(
+Future<bool> writeHomebrewInfo(
     String channel, String version, String repository, bool dryRun) async {
   var formula = File(p.join(repository, formulaByChannel[channel]));
   var contents = await formula.readAsString();
   var hashes = await _getHashes(channel, version);
   var updated = updateFormula(channel, contents, version, hashes);
-  if (dryRun) {
-    print(updated);
-  } else {
-    await formula.writeAsString(updated, flush: true);
+  bool changed = contents != updated;
+  if (changed) {
+    if (dryRun) {
+      print(updated);
+    } else {
+      await formula.writeAsString(updated, flush: true);
+    }
   }
+  return changed;
 }
 
 Future<void> runGit(List<String> args, String repository,
-    Map<String, String> gitEnvironment, bool dryRun) async {
+    Map<String, String>? gitEnvironment, bool dryRun) async {
   if (dryRun) {
     args = [args[0], '--dry-run', ...args.skip(1)];
   }
   print("git ${args.join(' ')}");
 
-  var result = await Process.run('git', args,
+  final result = await Process.run('git', args,
       workingDirectory: repository, environment: gitEnvironment);
 
-  print(result.stdout);
-  print(result.stderr);
+  if (result.stdout != "") {
+    print(result.stdout.trimRight());
+  }
+  if (result.stderr != "") {
+    print(result.stderr.trimRight());
+  }
+
+  if (result.exitCode != 0 && !dryRun /* the test doesn't write a file */) {
+    throw Exception("Command exited ${result.exitCode}: git ${args.join(' ')}");
+  }
 }
