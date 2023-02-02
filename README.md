@@ -71,3 +71,10 @@ where `HOMEBREW_INSTALL` is the path to your homebrew installation directory (ru
 
 [homebrew]: http://brew.sh/
 [dart]: https://dart.dev
+
+## Contributing
+
+Contributions welcome! Note that this repository accepts PRs but that changes
+are reviewed (and merged) from the Gerrit review tool. The automatically created
+Gerrit CL can be found from the PR, under "View Details" button, linked off the
+`import/copybara` status check.
