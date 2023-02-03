@@ -75,6 +75,9 @@ where `HOMEBREW_INSTALL` is the path to your homebrew installation directory (ru
 ## Contributing
 
 Contributions welcome! Note that this repository accepts PRs but that changes
-are reviewed (and merged) from the Gerrit review tool. The automatically created
-Gerrit CL can be found from the PR, under "View Details" button, linked off the
-`import/copybara` status check.
+are reviewed (and merged) from the Gerrit review tool. After creating a PR, a
+Gerrit review CL will automatically be created and a link to it written to the
+PR.
+
+For more information about the workflow, see our [contributing](CONTRIBUTING.md)
+docs (and for project maintainers, please avoid merging PRs directly).
