@@ -2,9 +2,12 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:args/args.dart';
+import 'package:http/http.dart';
+import 'package:http/retry.dart';
 import 'package:stack_trace/stack_trace.dart';
 import 'package:update_homebrew/update_homebrew.dart';
 
@@ -22,17 +25,23 @@ Future<void> updateHomeBrew(List<String> args) async {
   final parser = ArgParser()
     ..addFlag('dry-run', abbr: 'n')
     ..addOption('revision', abbr: 'r')
-    ..addOption('channel', abbr: 'c', allowed: supportedChannels);
+    ..addMultiOption('channel',
+        abbr: 'c', allowed: supportedChannels, defaultsTo: supportedChannels);
+
   final options = parser.parse(args);
   final dryRun = options['dry-run'] as bool;
-  final revision = options['revision'] as String?;
-  final channel = options['channel'] as String?;
-  if (revision == null || channel == null) {
-    print("Usage: update_homebrew.dart -r version -c channel [-n]");
-    exitCode = 64;
-    return;
+  final revisionOption = options['revision'] as String?;
+  final channels = options['channel'] as List<String>;
+  if (revisionOption != null && channels.length != 1) {
+    throw Exception('-r requires a singular channel set with -c');
   }
+  for (final channel in channels) {
+    final revision = revisionOption ?? await getLatestVersion(channel);
+    await updateVersion(revision, channel, dryRun);
+  }
+}
 
+Future<void> updateVersion(String revision, String channel, bool dryRun) async {
   final repository = Directory.current.path;
   if (await writeHomebrewInfo(channel, revision, repository, dryRun)) {
     await runGit(
@@ -41,6 +50,17 @@ Future<void> updateHomeBrew(List<String> args) async {
         null,
         dryRun);
   } else {
-    print("Channel $channel is up to date at version $revision");
+    print('Channel $channel is up to date at version $revision');
+  }
+}
+
+Future<String> getLatestVersion(String channel) async {
+  final uri = Uri.parse('https://storage.googleapis.com/'
+      'dart-archive/channels/$channel/release/latest/VERSION');
+  final client = RetryClient(Client());
+  try {
+    return jsonDecode(await client.read(uri))['version'];
+  } finally {
+    client.close();
   }
 }
