@@ -9,10 +9,10 @@ class Dart < Formula
     version "3.0.0-369.0.dev"
     if OS.mac? && Hardware::CPU.intel?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.0.0-369.0.dev/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "3a5266bcfd6bc15c53cb7e9dd02830b9fc3c8bf370008690d131bc7212adff35"
+      sha256 "54bc7a12c1672abc9643c9beb4568b0e3bf82d3966a38cc75030be1c42ea3418"
     elsif OS.mac? && Hardware::CPU.arm?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.0.0-369.0.dev/sdk/dartsdk-macos-arm64-release.zip"
-      sha256 "269cd67bb28e2cc552966c681a8b0a81ea0f14dbdf05e1bea2bf0a5dc9fa2edb"
+      sha256 "4a42b7ad9914b67b5056a59f04f9ceab8c306a5a33e5bf898e0fc667b2d58383"
     elsif OS.linux? && Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.0.0-369.0.dev/sdk/dartsdk-linux-x64-release.zip"
