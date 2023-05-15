@@ -8,7 +8,7 @@ on:
 
 jobs:
   do-not-submit:
-    name: Prevent submission (Gerrit reviewed)
+    name: Gerrit reviewed
     runs-on: ubuntu-latest
     steps:
       - run: |
