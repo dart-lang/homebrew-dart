@@ -1,0 +1,16 @@
+# A workflow to prevent PRs from being submitted through the GitHub UI.
+
+name: Do Not Submit
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  do-not-submit:
+    name: Gerrit reviewed
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Do not submit this PR through github - this repo uses Gerrit for reviews."
+          exit 1
