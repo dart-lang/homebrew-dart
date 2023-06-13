@@ -8,3 +8,8 @@ updates:
   directory: "/"
   schedule:
     interval: "monthly"
+
+- package-ecosystem: "pub"
+  directory: "/scripts"
+  schedule:
+    interval: "monthly"
