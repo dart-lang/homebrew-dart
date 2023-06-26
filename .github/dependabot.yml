@@ -10,6 +10,6 @@ updates:
     interval: "monthly"
 
 - package-ecosystem: "pub"
-  directory: "/scripts"
+  directory: "/"
   schedule:
     interval: "monthly"
