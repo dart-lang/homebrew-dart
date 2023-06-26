@@ -4,12 +4,12 @@
 version: 2
 updates:
 
-- package-ecosystem: "github-actions"
-  directory: "/"
+- package-ecosystem: github-actions
+  directory: /
   schedule:
-    interval: "monthly"
+    interval: monthly
 
-- package-ecosystem: "pub"
-  directory: "/scripts"
+- package-ecosystem: pub
+  directory: /
   schedule:
-    interval: "monthly"
+    interval: monthly
