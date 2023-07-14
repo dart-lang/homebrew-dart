@@ -1,0 +1,26 @@
+name: Install Dart
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.rb'
+      - .github/workflows/install-dart.yml
+  pull_request:
+    paths:
+      - '**.rb'
+      - .github/workflows/install-dart.yml
+jobs:
+  test-bot:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@251cc053a43110ce4dea3cdb6f038147c82d0257
+
+      - run: brew tap dart-lang/dart
+
+      - run: brew install dart
