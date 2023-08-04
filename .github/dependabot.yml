@@ -8,8 +8,12 @@ updates:
   directory: /
   schedule:
     interval: monthly
+  labels:
+      - type-infra
 
 - package-ecosystem: pub
   directory: /
   schedule:
     interval: monthly
+  labels:
+      - type-infra
