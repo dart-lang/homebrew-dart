@@ -7,7 +7,7 @@ environment:
 dependencies:
   _discoveryapis_commons: ^1.0.5
   args: ^2.3.0
-  googleapis: ^11.4.0
+  googleapis: ^12.0.0
   http: ^1.1.2
   path: ^1.4.1
   stack_trace: ^1.11.1
