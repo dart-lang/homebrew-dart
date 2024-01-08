@@ -1,8 +1,8 @@
 # typed: false
 # frozen_string_literal: true
 
-class DartAT30 < Formula
-  desc "Dart SDK"
+class DartAT3_0_7 < Formula
+  desc "SDK"
   homepage "https://dart.dev"
 
   keg_only :versioned_formula
@@ -33,7 +33,7 @@ class DartAT30 < Formula
   def install
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/dart"
-    bin.write_exec_script Dir["#{libexec}/bin/{dart?*}"]
+    bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
   end
 
   def caveats

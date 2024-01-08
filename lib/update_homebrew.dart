@@ -15,31 +15,60 @@ import 'src/formula.dart';
 
 part 'src/impl.dart';
 
-const githubRepo = 'dart-lang/homebrew-dart';
-
 const formulaByChannel = {
-  'beta': 'Formula/dart-beta.rb',
   'dev': 'Formula/dart.rb',
+  'beta': 'Formula/dart-beta.rb',
   'stable': 'Formula/dart.rb'
 };
 
 Iterable<String> get supportedChannels => formulaByChannel.keys;
 
-Future<bool> writeHomebrewInfo(
-    String channel, String version, String repository, bool dryRun) async {
-  var formula = File(p.join(repository, formulaByChannel[channel]));
-  var contents = await formula.readAsString();
-  var hashes = await _getHashes(channel, version);
-  var updated = updateFormula(channel, contents, version, hashes);
-  bool changed = contents != updated;
-  if (changed) {
+Future<bool> writeHomebrewInfo(String channel, String version,
+    String repository, bool dryRun, bool isLatest) async {
+  final versionedFormula = File(p.join(repository, 'Formula/dart@$version.rb'));
+  if (!isLatest && versionedFormula.existsSync()) {
+    return false;
+  }
+  final formula = File(p.join(repository, formulaByChannel[channel]));
+  final contents = await formula.readAsString();
+  final hashes = await _getHashes(channel, version);
+  final updated = updateFormula(channel, contents, version, hashes);
+  bool changed = false;
+  if (isLatest && contents != updated) {
+    changed = true;
     if (dryRun) {
-      print(updated);
+      print('Writing $formula');
     } else {
       await formula.writeAsString(updated, flush: true);
     }
   }
+  if (channel == 'stable') {
+    if (await writeVersion(updated, version, repository, dryRun, isLatest)) {
+      changed = true;
+    }
+  }
   return changed;
+}
+
+Future<bool> writeVersion(String contents, String version, String repository,
+    bool dryRun, bool isLatest) async {
+  final formula = File(p.join(repository, 'Formula/dart@$version.rb'));
+  contents = contents
+      .replaceFirst('class Dart', 'class DartAT${version.replaceAll(".", "_")}')
+      .replaceFirst(
+          RegExp(r'head do.*dart-beta ships the same binaries"',
+              dotAll: true, multiLine: true),
+          'keg_only :versioned_formula');
+  if (!await formula.exists() ||
+      (isLatest && await formula.readAsString() != contents)) {
+    if (dryRun) {
+      print('Writing $formula');
+    } else {
+      await formula.writeAsString(contents, flush: true);
+    }
+    return true;
+  }
+  return false;
 }
 
 Future<void> runGit(List<String> args, String repository,
@@ -62,4 +91,18 @@ Future<void> runGit(List<String> args, String repository,
   if (result.exitCode != 0 && !dryRun /* the test doesn't write a file */) {
     throw Exception("Command exited ${result.exitCode}: git ${args.join(' ')}");
   }
+}
+
+bool isModernVersion(String version) => 3 <= int.parse(version.split('.')[0]);
+
+bool isNewerStableVersion(String a, String b) {
+  final aMajor = int.parse(a.split('.')[0]);
+  final aMinor = int.parse(a.split('.')[1]);
+  final aPatch = int.parse(a.split('.')[2]);
+  final bMajor = int.parse(b.split('.')[0]);
+  final bMinor = int.parse(b.split('.')[1]);
+  final bPatch = int.parse(b.split('.')[2]);
+  return aMajor < bMajor ||
+      (aMajor == bMajor &&
+          (aMinor < bMinor || (aMinor == bMinor && aPatch < bPatch)));
 }
