@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class DartAT3_2_1 < Formula
+class DartAT321 < Formula
   desc "SDK"
   homepage "https://dart.dev"
 

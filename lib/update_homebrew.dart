@@ -54,7 +54,7 @@ Future<bool> writeVersion(String contents, String version, String repository,
     bool dryRun, bool isLatest) async {
   final formula = File(p.join(repository, 'Formula/dart@$version.rb'));
   contents = contents
-      .replaceFirst('class Dart', 'class DartAT${version.replaceAll(".", "_")}')
+      .replaceFirst('class Dart', 'class DartAT${version.replaceAll(".", "")}')
       .replaceFirst(
           RegExp(r'head do.*dart-beta ships the same binaries"',
               dotAll: true, multiLine: true),
