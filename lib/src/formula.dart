@@ -7,21 +7,19 @@ String updateFormula(String channel, String contents, String version,
   // Replace the version identifier. Formulas with stable and pre-release
   // versions have multiple identifiers and only the right one should be
   // updated.
-  var versionId = channel == 'stable'
-      ? RegExp(r'version \"\d+\.\d+.\d+\"')
-      : RegExp(r'version \"\d+\.\d+.\d+\-.+\"');
-  contents = contents.replaceAll(versionId, 'version "$version"');
+  final versionId = RegExp(r'version \"\d+\.\d+.\d+(-[^"]+)?\" # ' + channel);
+  contents = contents.replaceAll(versionId, 'version "$version" # $channel');
 
   // Extract files and hashes that are stored in the formula in this format:
   //  url "<url base>/<channel>/release/<version>/sdk/<artifact>.zip"
   //  sha256 "<hash>"
-  var filesAndHashes = RegExp(
+  final filesAndHashes = RegExp(
       'channels/$channel/release'
       r'/\d[\w\d\-\.]*/sdk/([\w\d\-\.]+)\"\n(\s+)sha256 \"[\da-f]+\"',
       multiLine: true);
   return contents.replaceAllMapped(filesAndHashes, (m) {
-    var artifact = m.group(1);
-    var indent = m.group(2);
+    final artifact = m.group(1);
+    final indent = m.group(2);
     return 'channels/$channel/release/$version/sdk/$artifact"\n'
         '${indent}sha256 "${hashes[artifact]}"';
   });

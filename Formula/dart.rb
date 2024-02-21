@@ -6,7 +6,7 @@ class Dart < Formula
   homepage "https://dart.dev"
 
   head do
-    version "3.4.0-154.0.dev"
+    version "3.4.0-154.0.dev" # dev
     if OS.mac? && Hardware::CPU.intel?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.4.0-154.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "cc1392b79b7fa5fe210b75669558970ac250ecf72fa20bb0128e6e14ee6aa7de"

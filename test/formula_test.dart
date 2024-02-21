@@ -7,7 +7,7 @@ import 'package:update_homebrew/src/formula.dart';
 
 const _devFormula = '''
   head do
-    version "2.15.0-65.0.dev"
+    version "2.15.0-65.0.dev" # dev
     if OS.mac? && Hardware::CPU.intel?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.15.0-65.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "9c71429a806dd2ac7968542771764dd5d1b7c71fd03851c6870eb5c3f687fb1b"
@@ -36,7 +36,7 @@ const _devFormula = '''
 
 const _devFormulaExpected = '''
   head do
-    version "2.16.0-76.0.dev"
+    version "2.16.0-76.0.dev" # dev
     if OS.mac? && Hardware::CPU.intel?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.16.0-76.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "bbb"
