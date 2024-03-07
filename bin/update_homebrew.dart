@@ -53,7 +53,7 @@ Future<void> updateVersion(String version, String channel, bool dryRun,
       final majorMinor = version.split('.').take(2).join('.');
       final newFormula = 'Formula/dart@$version.rb';
       if (!noCommit) {
-        runGit(['add', newFormula], repository, null, dryRun);
+        await runGit(['add', newFormula], repository, null, dryRun);
       }
       final alias = Link('Aliases/dart@$majorMinor');
       if (!alias.existsSync() ||
@@ -71,7 +71,7 @@ Future<void> updateVersion(String version, String channel, bool dryRun,
           alias.createSync('../$newFormula');
         }
         if (!noCommit) {
-          runGit(['add', alias.path], repository, null, dryRun);
+          await runGit(['add', alias.path], repository, null, dryRun);
         }
       }
     }
