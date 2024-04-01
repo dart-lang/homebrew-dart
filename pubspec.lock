@@ -109,10 +109,10 @@ packages:
     dependency: "direct main"
     description:
       name: googleapis
-      sha256: "4e101034eeec5bc949046732d4cea322a8c7a4f69d112c6376912c94705be6f2"
+      sha256: "4eefba93b5f714d6c2bcc1695ff6fb09d36684d2a06912285d3981069796da10"
       url: "https://pub.dev"
     source: hosted
-    version: "13.0.0"
+    version: "13.1.0"
   http:
     dependency: "direct main"
     description:
