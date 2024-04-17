@@ -1,38 +1,11 @@
 # typed: false
 # frozen_string_literal: true
 
-class Dart < Formula
+class DartAT334 < Formula
   desc "SDK"
   homepage "https://dart.dev"
 
-  head do
-    version "3.5.0-58.0.dev" # dev
-    if OS.mac? && Hardware::CPU.intel?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.5.0-58.0.dev/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "37a16c1fd9ffda0867103cc7f75f4823834da8472cf3370fcc579f44235e4404"
-    elsif OS.mac? && Hardware::CPU.arm?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.5.0-58.0.dev/sdk/dartsdk-macos-arm64-release.zip"
-      sha256 "430c5d7e4d2c4fe6b0ef0ae3ce192bb8c509bd5f06b00ab67c4a465d4e0c9c60"
-    elsif OS.linux? && Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.5.0-58.0.dev/sdk/dartsdk-linux-x64-release.zip"
-        sha256 "9953043dec1776d19e327521228362c07d274cefe1700a41dcae73a63f55420f"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.5.0-58.0.dev/sdk/dartsdk-linux-ia32-release.zip"
-        sha256 "40a5933a306c31dac050279dc41dcfd0d5a0ef5f924e16ca3be162ef8d7b5378"
-      end
-    elsif OS.linux? && Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.5.0-58.0.dev/sdk/dartsdk-linux-arm64-release.zip"
-        sha256 "a6f3bc56356be47480a6ce1c17bb65ec5158410bb180f905d2d9ac4bc025e856"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.5.0-58.0.dev/sdk/dartsdk-linux-arm-release.zip"
-        sha256 "e4f0a03852f90d1a92f6c741d15f361a788a6fae378cdc9ec093419a42d7fb37"
-      end
-    end
-  end
-
-  conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
+  keg_only :versioned_formula
   if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/3.3.4/sdk/dartsdk-macos-x64-release.zip"
     sha256 "62285d9156bf6fb4439420bc327ab772df3a248b5d2df978284f510edb5d2c4a"
