@@ -9,11 +9,15 @@ updates:
   schedule:
     interval: monthly
   labels:
-      - type-infra
+    - type-infra
+  groups:
+    github-actions:
+      patterns:
+        - "*"
 
 - package-ecosystem: pub
   directory: /
   schedule:
     interval: monthly
   labels:
-      - type-infra
+    - type-infra
