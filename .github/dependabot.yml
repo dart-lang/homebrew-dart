@@ -9,7 +9,11 @@ updates:
   schedule:
     interval: monthly
   labels:
-      - type-infra
+    - autosubmit
+  groups:
+    github-actions:
+      patterns:
+        - "*"
 
 - package-ecosystem: pub
   directory: /
