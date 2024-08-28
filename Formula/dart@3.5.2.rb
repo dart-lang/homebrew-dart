@@ -1,38 +1,11 @@
 # typed: false
 # frozen_string_literal: true
 
-class Dart < Formula
+class DartAT352 < Formula
   desc "SDK"
   homepage "https://dart.dev"
 
-  head do
-    version "3.6.0-178.0.dev" # dev
-    if OS.mac? && Hardware::CPU.intel?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.6.0-178.0.dev/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "522dab5540acb5ee51886c5424496dff74053ba30886d1e0fd26389c07c47fdb"
-    elsif OS.mac? && Hardware::CPU.arm?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.6.0-178.0.dev/sdk/dartsdk-macos-arm64-release.zip"
-      sha256 "c76073a2d392d9da800df2ed4d15201007ba8729abd5fbaf7f1743a624d667b6"
-    elsif OS.linux? && Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.6.0-178.0.dev/sdk/dartsdk-linux-x64-release.zip"
-        sha256 "cf723dd277dce968d916d0b59a78491d75d46512c34b8715953a8ed84260f134"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.6.0-178.0.dev/sdk/dartsdk-linux-ia32-release.zip"
-        sha256 "f48265262f26cc47f37f3720caf0f923b47e9d06a597494f2724f77b0ea0a9fa"
-      end
-    elsif OS.linux? && Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.6.0-178.0.dev/sdk/dartsdk-linux-arm64-release.zip"
-        sha256 "806b6b5210fe0f51c5a559411dcb65a2431e83779f2ab36d902c7141198eef46"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.6.0-178.0.dev/sdk/dartsdk-linux-arm-release.zip"
-        sha256 "444a74dd9174fd1cdd88e0a523de2d642f34c51854eff772ffe830ed8bbfca32"
-      end
-    end
-  end
-
-  conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
+  keg_only :versioned_formula
   if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/3.5.2/sdk/dartsdk-macos-x64-release.zip"
     sha256 "65f00ed58e635574fe69708644c65f2a938034ffd424832cd0a73ec5d63c304c"
