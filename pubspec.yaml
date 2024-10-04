@@ -2,7 +2,7 @@ name: update_homebrew
 
 publish_to: none
 environment:
-  sdk: ^3.4.0
+  sdk: ^3.5.0
 
 dependencies:
   _discoveryapis_commons: ^1.0.7
@@ -14,4 +14,4 @@ dependencies:
   test: ^1.25.8
 
 dev_dependencies:
-  lints: ^4.0.0
+  lints: ^5.0.0
