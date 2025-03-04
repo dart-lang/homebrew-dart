@@ -6,28 +6,28 @@ class Dart < Formula
   homepage "https://dart.dev"
 
   head do
-    version "3.8.0-110.0.dev" # dev
+    version "3.8.0-158.0.dev" # dev
     if OS.mac? && Hardware::CPU.intel?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-110.0.dev/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "706b229f64a06214ef2e9a363b93e6887b1690c73994d4a163abc175546242fb"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-158.0.dev/sdk/dartsdk-macos-x64-release.zip"
+      sha256 "b8fa7fa737d87e9c8d7462f583241440c9f8a08216888f9480a5843f4911f881"
     elsif OS.mac? && Hardware::CPU.arm?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-110.0.dev/sdk/dartsdk-macos-arm64-release.zip"
-      sha256 "29ac3d8154266747d06064df529c5ad6731244cb043b67ec2c91d64e02514efc"
+      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-158.0.dev/sdk/dartsdk-macos-arm64-release.zip"
+      sha256 "644f722fba69c84805136ca4ca54c77b6349a320dcf39e156dc2d9d82dcd1751"
     elsif OS.linux? && Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-110.0.dev/sdk/dartsdk-linux-x64-release.zip"
-        sha256 "e762092eed55f307152421044f9b49d0f2d86299c92489045aab4853fff4d1ca"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-158.0.dev/sdk/dartsdk-linux-x64-release.zip"
+        sha256 "32e45e06e5fd7b95a1f53405e74e192d896a3861d1ebffc4816eb311616132ab"
       else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-110.0.dev/sdk/dartsdk-linux-ia32-release.zip"
-        sha256 "45dfdf950a352fd34eaf20bcad115eebe5489eb5329ac84e6e7cd8a6fce79d26"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-158.0.dev/sdk/dartsdk-linux-ia32-release.zip"
+        sha256 "5c74261b80a852dde7d6344c6d35516363964554ef400748f8241086b634a177"
       end
     elsif OS.linux? && Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-110.0.dev/sdk/dartsdk-linux-arm64-release.zip"
-        sha256 "86ce96f526568d8e9272feb16dc86d0ae5f46800edd365963adf8350870fe007"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-158.0.dev/sdk/dartsdk-linux-arm64-release.zip"
+        sha256 "02587b17f18c085818f1b605f35cbd77e786d60e654e14cea0138086a3eaec81"
       else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-110.0.dev/sdk/dartsdk-linux-arm-release.zip"
-        sha256 "dcc38aa0f7aef0e8ee3eb5891c39ee7d4446d69439393d27c0b5abe219d2e241"
+        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.8.0-158.0.dev/sdk/dartsdk-linux-arm-release.zip"
+        sha256 "cf9c542afda92fd1e705f97b10b2fa892d9848eead788031a96625c6704954e8"
       end
     end
   end
