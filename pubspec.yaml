@@ -6,7 +6,7 @@ environment:
 
 dependencies:
   _discoveryapis_commons: ^1.0.7
-  args: ^2.6.0
+  args: ^2.7.0
   googleapis: ^14.0.0
   http: ^1.3.0
   path: ^1.9.1
