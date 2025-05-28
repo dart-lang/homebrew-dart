@@ -19,7 +19,7 @@ class DartBeta < Formula
       sha256 "9b503e642c862f404b46490cb6ba652c71d276fb7eb415283abe172a8574806f"
     else
       url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-100.2.beta/sdk/dartsdk-linux-ia32-release.zip"
-      sha256 "902d2f6197ae2854015df5dede8f82bc66126dab1e9b0fcad70a7162799e49ae"
+      sha256 "null"
     end
   elsif OS.linux? && Hardware::CPU.arm?
     if Hardware::CPU.is_64_bit?
