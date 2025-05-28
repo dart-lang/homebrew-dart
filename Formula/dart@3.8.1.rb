@@ -1,38 +1,11 @@
 # typed: false
 # frozen_string_literal: true
 
-class Dart < Formula
+class DartAT381 < Formula
   desc "SDK"
   homepage "https://dart.dev"
 
-  head do
-    version "3.9.0-152.0.dev" # dev
-    if OS.mac? && Hardware::CPU.intel?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-152.0.dev/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "3b6295b02b30f283bcc9344c7a4e7276c989d0f16329f81dbc9f4cbf8241651e"
-    elsif OS.mac? && Hardware::CPU.arm?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-152.0.dev/sdk/dartsdk-macos-arm64-release.zip"
-      sha256 "a8f935dbe845361e8093ba87928bc4245da90c362ef4c1d0bb6b5842bd1693d9"
-    elsif OS.linux? && Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-152.0.dev/sdk/dartsdk-linux-x64-release.zip"
-        sha256 "417a0f7ddbfee56dea7a377eba0fc6973712967ab12b07fcc3fa00c7c2e5c333"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-152.0.dev/sdk/dartsdk-linux-ia32-release.zip"
-        sha256 "null"
-      end
-    elsif OS.linux? && Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-152.0.dev/sdk/dartsdk-linux-arm64-release.zip"
-        sha256 "e5b599d5aedc9d26c9f15262873edde0d1f28d98c7d3d313387a35969ff9b8ff"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-152.0.dev/sdk/dartsdk-linux-arm-release.zip"
-        sha256 "fa92997e86632baeae32ce026dc0ce1ec4aeda5f8cb095a428c3389752c248d4"
-      end
-    end
-  end
-
-  conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
+  keg_only :versioned_formula
   if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/3.8.1/sdk/dartsdk-macos-x64-release.zip"
     sha256 "39371df3d64f94f5b3d9c1119c3f549164c5628c6a13b9451b7b44859f1f9114"
