@@ -9,7 +9,6 @@ const _files = [
   'dartsdk-macos-x64-release.zip',
   'dartsdk-linux-x64-release.zip',
   'dartsdk-linux-arm64-release.zip',
-  'dartsdk-linux-ia32-release.zip',
   'dartsdk-linux-arm-release.zip',
 ];
 
