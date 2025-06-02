@@ -21,3 +21,7 @@ updates:
     interval: monthly
   labels:
     - type-infra
+  groups:
+    pub:
+      patterns:
+        - "*"
