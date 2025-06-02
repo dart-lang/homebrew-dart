@@ -18,13 +18,18 @@ part 'src/impl.dart';
 const formulaByChannel = {
   'dev': 'Formula/dart.rb',
   'beta': 'Formula/dart-beta.rb',
-  'stable': 'Formula/dart.rb'
+  'stable': 'Formula/dart.rb',
 };
 
 Iterable<String> get supportedChannels => formulaByChannel.keys;
 
-Future<bool> writeHomebrewInfo(String channel, String version,
-    String repository, bool dryRun, bool isLatest) async {
+Future<bool> writeHomebrewInfo(
+  String channel,
+  String version,
+  String repository,
+  bool dryRun,
+  bool isLatest,
+) async {
   final versionedFormula = File(p.join(repository, 'Formula/dart@$version.rb'));
   if (!isLatest && versionedFormula.existsSync()) {
     return false;
@@ -50,15 +55,24 @@ Future<bool> writeHomebrewInfo(String channel, String version,
   return changed;
 }
 
-Future<bool> writeVersion(String contents, String version, String repository,
-    bool dryRun, bool isLatest) async {
+Future<bool> writeVersion(
+  String contents,
+  String version,
+  String repository,
+  bool dryRun,
+  bool isLatest,
+) async {
   final formula = File(p.join(repository, 'Formula/dart@$version.rb'));
   contents = contents
       .replaceFirst('class Dart', 'class DartAT${version.replaceAll(".", "")}')
       .replaceFirst(
-          RegExp(r'head do.*dart-beta ships the same binaries"',
-              dotAll: true, multiLine: true),
-          'keg_only :versioned_formula');
+        RegExp(
+          r'head do.*dart-beta ships the same binaries"',
+          dotAll: true,
+          multiLine: true,
+        ),
+        'keg_only :versioned_formula',
+      );
   if (!await formula.exists() ||
       (isLatest && await formula.readAsString() != contents)) {
     if (dryRun) {
@@ -71,15 +85,23 @@ Future<bool> writeVersion(String contents, String version, String repository,
   return false;
 }
 
-Future<void> runGit(List<String> args, String repository,
-    Map<String, String>? gitEnvironment, bool dryRun) async {
+Future<void> runGit(
+  List<String> args,
+  String repository,
+  Map<String, String>? gitEnvironment,
+  bool dryRun,
+) async {
   if (dryRun) {
     args = [args[0], '--dry-run', ...args.skip(1)];
   }
   print("git ${args.join(' ')}");
 
-  final result = await Process.run('git', args,
-      workingDirectory: repository, environment: gitEnvironment);
+  final result = await Process.run(
+    'git',
+    args,
+    workingDirectory: repository,
+    environment: gitEnvironment,
+  );
 
   if (result.stdout != "") {
     print(result.stdout.trimRight());
@@ -88,7 +110,7 @@ Future<void> runGit(List<String> args, String repository,
     print(result.stderr.trimRight());
   }
 
-  if (result.exitCode != 0 && !dryRun /* the test doesn't write a file */) {
+  if (result.exitCode != 0 && !dryRun /* the test doesn't write a file */ ) {
     throw Exception("Command exited ${result.exitCode}: git ${args.join(' ')}");
   }
 }

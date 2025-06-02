@@ -63,7 +63,7 @@ const _devFormulaExpected = '''
   end
 ''';
 
-main() {
+void main() {
   test('update dev formula', () {
     var hashes = {
       'dartsdk-macos-arm64-release.zip': 'aaa',

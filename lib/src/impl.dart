@@ -13,13 +13,21 @@ const _files = [
 ];
 
 Future<String> _getHash256(
-    String channel, String version, String download) async {
+  String channel,
+  String version,
+  String download,
+) async {
   var client = http.Client();
   try {
     var api = storage.StorageApi(client);
     var url = 'channels/$channel/release/$version/sdk/$download.sha256sum';
-    var media = await api.objects.get('dart-archive', url,
-        downloadOptions: DownloadOptions.fullMedia) as Media;
+    var media =
+        await api.objects.get(
+              'dart-archive',
+              url,
+              downloadOptions: DownloadOptions.fullMedia,
+            )
+            as Media;
     var hashLine = await ascii.decodeStream(media.stream);
     return RegExp('[0-9a-fA-F]*').stringMatch(hashLine)!;
   } finally {
@@ -29,6 +37,6 @@ Future<String> _getHash256(
 
 Future<Map<String, String>> _getHashes(String channel, String version) async {
   return <String, String>{
-    for (var file in _files) file: await _getHash256(channel, version, file)
+    for (var file in _files) file: await _getHash256(channel, version, file),
   };
 }

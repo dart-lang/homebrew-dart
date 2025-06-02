@@ -7,7 +7,10 @@ import '../bin/update_homebrew.dart' as bin;
 
 void main() {
   test('dry run', () async {
-    await bin
-        .updateHomeBrew(['--dry-run', '--revision=2.14.1', '--channel=stable']);
+    await bin.updateHomeBrew([
+      '--dry-run',
+      '--revision=2.14.1',
+      '--channel=stable',
+    ]);
   });
 }

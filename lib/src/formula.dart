@@ -2,8 +2,12 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-String updateFormula(String channel, String contents, String version,
-    Map<String, String> hashes) {
+String updateFormula(
+  String channel,
+  String contents,
+  String version,
+  Map<String, String> hashes,
+) {
   // Replace the version identifier. Formulas with stable and pre-release
   // versions have multiple identifiers and only the right one should be
   // updated.
@@ -14,9 +18,10 @@ String updateFormula(String channel, String contents, String version,
   //  url "<url base>/<channel>/release/<version>/sdk/<artifact>.zip"
   //  sha256 "<hash>"
   final filesAndHashes = RegExp(
-      'channels/$channel/release'
-      r'/\d[\w\d\-\.]*/sdk/([\w\d\-\.]+)\"\n(\s+)sha256 \"[\da-f]+\"',
-      multiLine: true);
+    'channels/$channel/release'
+    r'/\d[\w\d\-\.]*/sdk/([\w\d\-\.]+)\"\n(\s+)sha256 \"[\da-f]+\"',
+    multiLine: true,
+  );
   return contents.replaceAllMapped(filesAndHashes, (m) {
     final artifact = m.group(1);
     final indent = m.group(2);
