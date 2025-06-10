@@ -11,7 +11,7 @@ If you don't have homebrew, install it from their [homepage][homebrew].
 Then, add this tap:
 
 ```
-brew tap dart-lang/dart
+`brew tap dart-lang/dart`
 ```
 
 ## Installing
