@@ -4,25 +4,25 @@
 class DartBeta < Formula
   desc "Beta SDK"
   homepage "https://dart.dev"
-  version "3.9.0-196.1.beta" # beta
+  version "3.9.0-333.2.beta" # beta
 
   conflicts_with "dart", because: "dart ships the same binaries"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-196.1.beta/sdk/dartsdk-macos-x64-release.zip"
-    sha256 "e6a8416dcb0076bc8d85e440c71600e5a3102c897b52b340188e099cd2d519bf"
+    url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-333.2.beta/sdk/dartsdk-macos-x64-release.zip"
+    sha256 "226ac3f3ebe805f3a7abe8cad5d81727b6fcf2fac42dc8e475c11426f1473c35"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-196.1.beta/sdk/dartsdk-macos-arm64-release.zip"
-    sha256 "23ecbb0feff600b969912994aff3f1f4ba932b2d6df43863a615f41f74724cc6"
+    url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-333.2.beta/sdk/dartsdk-macos-arm64-release.zip"
+    sha256 "28590e493407cce73134a3e03672f9b0bfe5edb8dcd5c755bd9d1f94f7ad4cdb"
   elsif OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-196.1.beta/sdk/dartsdk-linux-x64-release.zip"
-    sha256 "d97e026a18428748fc3b4fd7762a6e6b03c44954ba5245d7ebef448832ad3efc"
+    url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-333.2.beta/sdk/dartsdk-linux-x64-release.zip"
+    sha256 "8e531e3020138c998dc997665b86b335e340875823518b0075cdf1613420930f"
   elsif OS.linux? && Hardware::CPU.arm?
     if Hardware::CPU.is_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-196.1.beta/sdk/dartsdk-linux-arm64-release.zip"
-      sha256 "e60b9ffd7b5fe2bbc8ee35c492521ba6bc07c94bac64ae7199ca77df737d61a3"
+      url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-333.2.beta/sdk/dartsdk-linux-arm64-release.zip"
+      sha256 "56f28331e553e0550c859b89b4e497772f35b08c2456317d4bd7601c7fb40364"
     else
-      url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-196.1.beta/sdk/dartsdk-linux-arm-release.zip"
-      sha256 "51522ceae050f3d6aeedd6a3702992daa34d8aca6e316ef8c33e46e3a3656ea6"
+      url "https://storage.googleapis.com/dart-archive/channels/beta/release/3.9.0-333.2.beta/sdk/dartsdk-linux-arm-release.zip"
+      sha256 "d1fba196f4d11767051da730f1d47eb23fb6a87cb05de7b98aa779518cb71227"
     end
   end
 
