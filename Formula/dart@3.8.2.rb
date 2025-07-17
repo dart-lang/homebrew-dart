@@ -1,33 +1,11 @@
 # typed: false
 # frozen_string_literal: true
 
-class Dart < Formula
+class DartAT382 < Formula
   desc "SDK"
   homepage "https://dart.dev"
 
-  head do
-    version "3.9.0-333.0.dev" # dev
-    if OS.mac? && Hardware::CPU.intel?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-333.0.dev/sdk/dartsdk-macos-x64-release.zip"
-      sha256 "8d440366f833cc4a74a2e4c0364c6816990a69d5d1f93d2e95f3e9269f110cc5"
-    elsif OS.mac? && Hardware::CPU.arm?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-333.0.dev/sdk/dartsdk-macos-arm64-release.zip"
-      sha256 "97faf17675432f0751d835b4a9979444936b55bacef8d45f5d75e8fb7417f46e"
-    elsif OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-333.0.dev/sdk/dartsdk-linux-x64-release.zip"
-      sha256 "81893bc99e8a8f206395c1a10eb5969203dba32d2bbeb178c742364aaea3ab41"
-    elsif OS.linux? && Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-333.0.dev/sdk/dartsdk-linux-arm64-release.zip"
-        sha256 "8b60ac63c4766dba9d82303d3a62f44c476b0c518216dcd58a429761ab3bbd54"
-      else
-        url "https://storage.googleapis.com/dart-archive/channels/dev/release/3.9.0-333.0.dev/sdk/dartsdk-linux-arm-release.zip"
-        sha256 "e29ca4c598576693650d01c390363d39081217361f345c500ee8ad1ccf5f12db"
-      end
-    end
-  end
-
-  conflicts_with "dart-beta", because: "dart-beta ships the same binaries"
+  keg_only :versioned_formula
   if OS.mac? && Hardware::CPU.intel?
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/3.8.2/sdk/dartsdk-macos-x64-release.zip"
     sha256 "df47f9b0e344ce55dc7fc36b34f3cad2f51872550b8487e3dc7f90f6d951b891"
