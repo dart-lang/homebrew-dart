@@ -28,7 +28,7 @@ class DartAT383 < Formula
   def install
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/dart"
-    bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"]
+    bin.write_exec_script Dir["#{libexec}/bin/{pub,dart?*}"].select { |f| File.executable?(f) }
   end
 
   def caveats
