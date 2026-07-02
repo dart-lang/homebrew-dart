@@ -2,12 +2,12 @@ name: update_homebrew
 
 publish_to: none
 environment:
-  sdk: ^3.8.0
+  sdk: ^3.12.0
 
 dependencies:
   _discoveryapis_commons: ^1.0.7
   args: ^2.7.0
-  googleapis: ^15.0.0
+  googleapis: ^16.0.0
   http: ^1.6.0
   path: ^1.9.1
   stack_trace: ^1.12.1
