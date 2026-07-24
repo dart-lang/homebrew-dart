@@ -12,6 +12,7 @@ import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
 
 import 'src/formula.dart';
+export 'src/formula.dart' show versionRegExp;
 
 part 'src/impl.dart';
 
