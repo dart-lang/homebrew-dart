@@ -8,10 +8,11 @@ Mac users can use these formulae to easily install and update Dart SDK. Both dev
 
 If you don't have homebrew, install it from their [homepage][homebrew].
 
-Then, add this tap:
+Then, add and trust this tap:
 
 ```
 brew tap "dart-lang/dart"
+brew trust "dart-lang/dart"
 ```
 
 ## Installing
