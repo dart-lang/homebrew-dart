@@ -104,6 +104,15 @@ Future<void> updateVersion(
   }
 }
 
+String _checkVersion(String version) {
+  if (!versionRegExp.hasMatch(version)) {
+    throw FormatException(
+      'Remote version string does not match ${versionRegExp.pattern}',
+    );
+  }
+  return version;
+}
+
 Future<String> getLatestVersion(String channel) async {
   final uri = Uri.parse(
     'https://storage.googleapis.com/'
@@ -111,14 +120,13 @@ Future<String> getLatestVersion(String channel) async {
   );
   final client = RetryClient(Client());
   try {
-    return jsonDecode(await client.read(uri))['version'];
+    return _checkVersion(jsonDecode(await client.read(uri))['version']);
   } finally {
     client.close();
   }
 }
 
 Future<List<String>> getVersions(String channel) async {
-  final versionRegExp = RegExp(r'\d+\.\d+.\d+(-.+)?');
   final uri = Uri.parse(
     'https://storage.googleapis.com/'
     'storage/v1/b/dart-archive/o?delimiter=%2F&alt=json&'

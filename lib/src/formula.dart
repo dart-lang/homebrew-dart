@@ -2,6 +2,9 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+const versionPattern = r'\d+\.\d+\.\d+(-[\w.]+)?';
+final versionRegExp = RegExp('^$versionPattern\$');
+
 String updateFormula(
   String channel,
   String contents,
@@ -11,7 +14,7 @@ String updateFormula(
   // Replace the version identifier. Formulas with stable and pre-release
   // versions have multiple identifiers and only the right one should be
   // updated.
-  final versionId = RegExp(r'version \"\d+\.\d+.\d+(-[^"]+)?\" # ' + channel);
+  final versionId = RegExp('version "$versionPattern" # $channel');
   contents = contents.replaceAll(versionId, 'version "$version" # $channel');
 
   // Extract files and hashes that are stored in the formula in this format:
