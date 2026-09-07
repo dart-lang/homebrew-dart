@@ -19,16 +19,11 @@ Future<String> _getHash256(
 ) async {
   var client = http.Client();
   try {
-    var api = storage.StorageApi(client);
-    var url = 'channels/$channel/release/$version/sdk/$download.sha256sum';
-    var media =
-        await api.objects.get(
-              'dart-archive',
-              url,
-              downloadOptions: DownloadOptions.fullMedia,
-            )
-            as Media;
-    var hashLine = await ascii.decodeStream(media.stream);
+    var url = Uri.https(
+      'storage.googleapis.com',
+      'dart-archive/channels/$channel/release/$version/sdk/$download.sha256sum',
+    );
+    var hashLine = await client.read(url);
     return RegExp('[0-9a-fA-F]*').stringMatch(hashLine)!;
   } finally {
     client.close();
